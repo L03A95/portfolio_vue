@@ -37,10 +37,13 @@
 
     .ul-nav__li:hover {
         color: #34F537;
+        text-decoration: underline;
     }
 
     .ul-nav__li:active {
         color: #34F537;
+        text-decoration: underline;
+
     }
 
     @media screen and (min-width: 768px) {

@@ -10,7 +10,6 @@
             <AutoTyperVue componentTag="h2" :text="''" repeat="false" writtenBeginningWord="Fullstack web developer." startDelay="3000"  typingDelay="100"/>
             <AutoTyperVue componentTag="h3" id="main-auto-typer" :text="text" writtenBeginningWord="Hello " startDelay="5500" waitBeforeDeleteDelay="2000" typingDelay="100"/> 
         </div>
-        
     </div>
     
 </template>
