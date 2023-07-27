@@ -2,6 +2,7 @@
   import Nav from './components/Nav.vue'
   import Home from './components/Home.vue'
   import Skills from './components/Skills.vue'
+  import Proyects from './components/Proyects.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@
     <Nav class="nav"/>
     <Home class="home"/>
     <Skills class="skills"/>
+    <Proyects class="proyects"/>
   </div>
   
 </template>
@@ -20,6 +22,7 @@
   "header"
   "main"
   "skills"
+  "proyects"
   ;
 
   grid-template-rows: 8vh;
@@ -40,6 +43,10 @@
   grid-area: skills;
 }
 
+.proyects {
+  grid-area: proyects;
+}
+
 @media screen and (min-width: 640px) {
  
 }
@@ -49,6 +56,7 @@
     grid-template-areas: 
     "header main main main main"
     "header skills skills skills skills"
+    "header proyects proyects proyects proyects"
     ;
     grid-template-rows: repeat(2,100vh);
     grid-template-columns: repeat(5, 1fr);
@@ -64,7 +72,7 @@
     grid-template-areas: 
     "header main main main main main"
     "header skills skills skills skills skills"
-
+    "header proyects proyects proyects proyects proyects"
     ;
 
     grid-template-columns: repeat(6, 1fr);
@@ -81,7 +89,7 @@
     grid-template-areas: 
     "header main main main main main main main"
     "header skills skills skills skills skills skills skills"
-
+    "header proyects proyects proyects proyects proyects proyects proyects"
     ;
 
     grid-template-columns: repeat(8, 1fr);
@@ -99,7 +107,7 @@
     grid-template-areas: 
     "header main main main main main main main main main"
     "header skills skills skills skills skills skills skills skills skills"
-
+    "header proyects proyects proyects proyects proyects proyects proyects proyects proyects"
     ;
 
     grid-template-columns: repeat(10, 1fr);
