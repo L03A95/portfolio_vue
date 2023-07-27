@@ -14,9 +14,8 @@
 </template>
 <style scoped>
     .bg-nav {
-        background-color: #061413;
+        background-color: #1f1a1a;
         height: 8vh;
-        border-bottom: 1px solid #29C22B;
     }
 
     .ul-nav {
@@ -28,7 +27,7 @@
 
     .ul-nav__li {
         list-style-type: none;
-        color: #29C22B;
+        color: #dfdada;
         cursor: pointer;
         font-family:'Courier New', Courier, monospace;
         user-select: none;
@@ -55,7 +54,6 @@
         .bg-nav {
         height: 100vh;
         border-bottom: none;
-        border-right: 1px solid #29C22B;
     }
     }
 

@@ -6,9 +6,7 @@
 <template>
     <div class="bg-home">
         <div class="presentation_wrapper">
-           <AutoTyperVue componentTag="h1" :text="''" repeat="false" writtenBeginningWord="Liam Marlon Perez Lupia" startDelay="500"  typingDelay="100"/>
-            <AutoTyperVue componentTag="h2" :text="''" repeat="false" writtenBeginningWord="Fullstack web developer." startDelay="3000"  typingDelay="100"/>
-            <AutoTyperVue componentTag="h3" id="main-auto-typer" :text="text" writtenBeginningWord="Hello " startDelay="5500" waitBeforeDeleteDelay="2000" typingDelay="100"/> 
+           
         </div>
     </div>
     
@@ -42,7 +40,7 @@
     }
 
     .bg-home {
-        background-color: #020c0b;
+        background-color: #2f2a2a;
         height: 100vh;
     }
 </style>
