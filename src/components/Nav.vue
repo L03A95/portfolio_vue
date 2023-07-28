@@ -48,12 +48,15 @@
     @media screen and (min-width: 768px) {
         .ul-nav {
             flex-direction: column;
-            height: 100vh;
+            height: 50vh;
         }
 
         .bg-nav {
         height: 100vh;
         border-bottom: none;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
     }
     }
 
