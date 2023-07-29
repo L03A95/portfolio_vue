@@ -3,6 +3,9 @@ export default {
   props: {
     title: String,
     image: String,
+    description: String,
+    github: String,
+    domain: String,
     html: Boolean,
     css: Boolean,
     javascript: Boolean,
@@ -48,9 +51,12 @@ export default {
             <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
         </ul>
         
-        <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '200px' : '0' }" class="transition">
+        <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition">
             <p class="detail_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolores voluptatem consequatur optio, quam illo possimus ullam sequi excepturi cumque repellendus quidem, adipisci, voluptates hic labore odio repudiandae molestias harum?</p> 
-            <a>Link</a>
+            <div class="link_img_wrapper">
+                <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img"></a>
+                <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img"></a>
+            </div>
         </div>
         <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)'}">            
     </div>
@@ -154,7 +160,7 @@ export default {
 
     .arrow_btn {
         width: 40px;
-        margin-top: 24px;
+        margin-top: 6px;
         transition: 200ms;
     }
 
@@ -162,12 +168,18 @@ export default {
         overflow: hidden;
         position: relative;
         height: max-content;
-        padding: 10px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
     }
 
     .info_inactive {
         height: 0;
         overflow: hidden;
+
     }
 
     .transition {
@@ -178,6 +190,12 @@ export default {
         color: #fff;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+
+    .link_img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
 </style>
 
 
