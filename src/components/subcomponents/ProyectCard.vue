@@ -15,6 +15,16 @@ export default {
     express: Boolean,
     postgre: Boolean,
     sequelize: Boolean
+  },
+  data () {
+    return {
+        isActive: false
+    }
+  },
+  methods: {
+    handleActive () {
+        this.isActive = !this.isActive
+    }
   }
 }
 </script>
@@ -37,11 +47,12 @@ export default {
             <li class="tag postgre" v-if="postgre"><img src="../../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
             <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
         </ul>
-        <img src="../../images/flecha.png" class="arrow_btn">
-        <div class="more_info">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolores voluptatem consequatur optio, quam illo possimus ullam sequi excepturi cumque repellendus quidem, adipisci, voluptates hic labore odio repudiandae molestias harum?</p> 
+        
+        <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '200px' : '0' }" class="transition">
+            <p class="detail_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolores voluptatem consequatur optio, quam illo possimus ullam sequi excepturi cumque repellendus quidem, adipisci, voluptates hic labore odio repudiandae molestias harum?</p> 
             <a>Link</a>
-        </div>            
+        </div>
+        <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)'}">            
     </div>
 </template>
 
@@ -142,14 +153,30 @@ export default {
     }
 
     .arrow_btn {
-        transform: rotate(90deg);
         width: 40px;
         margin-top: 24px;
+        transition: 200ms;
     }
 
-    .more_info {
+    .info_active {
+        overflow: hidden;
+        position: relative;
+        height: max-content;
+        padding: 10px;
+    }
+
+    .info_inactive {
         height: 0;
         overflow: hidden;
+    }
+
+    .transition {
+        transition: 500ms;
+    }
+
+    .detail_text {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 </style>
 
