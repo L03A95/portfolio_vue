@@ -52,7 +52,7 @@ export default {
         </ul>
         
         <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition">
-            <p class="detail_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolores voluptatem consequatur optio, quam illo possimus ullam sequi excepturi cumque repellendus quidem, adipisci, voluptates hic labore odio repudiandae molestias harum?</p> 
+            <p class="detail_text">{{description}}</p> 
             <div class="link_img_wrapper">
                 <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img"></a>
                 <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img"></a>

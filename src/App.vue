@@ -2,7 +2,7 @@
   import Nav from './components/Nav.vue'
   import Home from './components/Home.vue'
   import Skills from './components/Skills.vue'
-  import Proyects from './components/Proyects.vue'
+  import Proyects from './components/Proyects/Proyects.vue'
 </script>
 
 <template>
