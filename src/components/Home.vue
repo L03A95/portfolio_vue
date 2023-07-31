@@ -6,7 +6,8 @@
 <template>
     <div class="bg-home">
         <div class="presentation_wrapper">
-           
+            <h1>Liam Marlon Perez Lupia</h1>
+            <h2>Full Stack web developer</h2>  
         </div>
     </div>
     
@@ -15,28 +16,22 @@
 <style scoped>
     @import "auto-typer-vue3/dist/style.css";
     h1 {
-        font-family:'Courier New', Courier, monospace;
-        color: #29C22B;
-        margin: 15px;
-        font-size: 26px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #dfdada;
+        margin-top: 45px;
+        font-size: 64px;
     }
 
     h2 {
-        font-family:'Courier New', Courier, monospace;
-        color: #29C22B;
-        margin: 15px;
-    }
-
-    h3 {
-        font-family:'Courier New', Courier, monospace;
-        color: #29C22B;
-        font-size: 22px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #dfdada;
+        font-size: 32px;
     }
 
     .presentation_wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin-left: 48px;
     }
 
     .bg-home {

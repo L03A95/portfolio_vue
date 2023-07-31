@@ -6,8 +6,27 @@
 <template>
     <div class="bg-skills">
         <div class="skills_wrapper">
+            <h3 class="skills_title">Skills</h3>
+            <div>
+
+                <h5 class="skill-subtitle">Frontend:</h5>                
+                <ul class="tags_wrapper">
+                <li class="tag html"  ><img src='../images/logo_html_800x800.png' class="tag_img">HTML</li>
+                <li class="tag css" ><img src=" ../images/logo_css_800x800.png" class="tag_img">CSS</li>
+                <li class="tag javascript"><img src="../images/logo_javascript400x400.png" class="tag_img">Javascript</li>
+                <li class="tag react" ><img src="../images/react_logo_2300x2000.png" class="tag_img">React.js</li>
+                <li class="tag vue" ><img src=" ../images/vuejs_logo.png" class="tag_img">Vue.js</li>
+                <li class="tag tailwind"><img src=' ../images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
+                <li class="tag redux" ><img src=" ../images/redux_logo_537x512.png" class="tag_img">Redux</li> </ul>
+                <h5 class="skill-subtitle">Backend:</h5>
+                <ul class="tags_wrapper">
+                <li class="tag node" ><img src=" ../images/node_logo.png" class="tag_img">Node.js</li>
+                <li class="tag express" ><img src=" ../images/express_logo_930x930.png" class="tag_img">Express.js</li>
+                <li class="tag postgre" ><img src=" ../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
+                <li class="tag sequelize" ><img src=" ../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
+                </ul>
+            </div>
             <Carrousel class="carrousel"/> 
-            <Editor class="editor"/>
         </div>
     </div>
 </template>
@@ -25,9 +44,19 @@ PostgreSQL, SQLite
 
 
 <style scoped> 
+    .skills_title {
+        color:#dfdada;
+        font-size: 80px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .skill-subtitle {
+        color:#dfdada;
+        font-size: 32px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     .bg-skills {
-         background-color: #041614;  /* #020c0b  color q debe ser*/
-        height: 100vh;
+         background-color: #2f2a2a;  /* #020c0b  color q debe ser*/
     }
     .carrousel {
         width: 85vw;
@@ -38,11 +67,11 @@ PostgreSQL, SQLite
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
     }
 
-    .editor {
-        font-size: 11px;
-    }
+
 
     @media screen and (min-width: 640px) {
             .editor {

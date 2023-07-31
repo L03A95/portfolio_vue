@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
-/* body {
-    overflow-y: hidden;
-} */
+@font-face {
+    font-family: 'Stoked'; /* El nombre que quieres darle a la fuente */
+    src: url('./src/assets/stoked.ttf') format('truetype'); /* Ruta correcta hacia la fuente */
+    /* Si tienes otros formatos de la fuente (otf, woff, etc.), agrega líneas adicionales aquí */
+  }

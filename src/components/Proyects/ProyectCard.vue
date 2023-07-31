@@ -84,7 +84,7 @@ export default {
     .tag {
         margin: 5px;
         background-color: #000;
-        color: #fff;
+        color: #dfdada;
         padding: 4px;
         border-radius: 4px;
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -102,11 +102,11 @@ export default {
     }
 
     .title {
-        color: #fff;
+        color: #dfdada;
         display: inline;
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 600;
-        font-size: large;
+        font-size: x-large
     }
 
     .tag_img {
@@ -187,7 +187,7 @@ export default {
     }
 
     .detail_text {
-        color: #fff;
+        color: #dfdada;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
@@ -197,33 +197,3 @@ export default {
     }
 
 </style>
-
-
-
-// HTML,CSS,Javascript, React, Vue, Tailwind, Redux, Node.js, Express, PostreSQL, Sequelize
-//
-// HTML = h
-// CSS = c
-// Javascript = j
-// React = R
-// Redux = r
-// Vue = v
-// Node = n
-// Express = e
-// Postgre = p
-// Sequelize = s
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-
