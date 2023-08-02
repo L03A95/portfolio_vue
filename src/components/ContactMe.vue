@@ -1,15 +1,48 @@
-<script>
+<script setup>
+import {ref} from 'vue'
+import emailjs from '@emailjs/browser'
+
+const input = ref({
+    name: '',
+    email: '',
+    subject: '',
+    message:''
+})
+
+const handleInputChange = (event) => {
+    input[event.target.name] = event.target.value
+}
+
+const sendMail = () => {
+    emailjs.init('4hg5wsIkVDcYDKOoL')
+    emailjs.send("service_uc6r896","template_8ckcjhs",{
+    subject: input.subject,
+    from_name: input.name,
+    message: input.message,
+    from_email: input.email,
+    reply_to: input.email,
+    });
+
+
+
+    input.value = {
+        name: '',
+        email: '',
+        subject: '',
+        message:''
+    }
+}
 
 </script>
 <template>
     <div class="contact_wrapper">
         <h3 class="contact-title">Contact me!</h3>
         <form class="form_wrapper">
-            <input placeholder="Name" class="input-name">
-            <input placeholder="Email" class="input-name">
-            <input placeholder="Subject" class="input-subject">
-            <textarea placeholder="Message" class="input-message"></textarea>
-            <button class="input_btn">Send</button>
+            <input placeholder="Name" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="input.name">
+            <input placeholder="Email" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="input.email">
+            <input placeholder="Subject" class="input-subject" name="subject" v-on:change="handleInputChange" v-bind:value="input.subject">
+            <textarea placeholder="Message" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="input.message"></textarea>
+            <input type="button" class="input_btn" value="Send" v-on:click="sendMail">
         </form>
     </div>
 </template>
