@@ -16,6 +16,7 @@
     .bg-nav {
         background-color: #1f1a1a;
         height: 8vh;
+        z-index: 1000;
     }
 
     .ul-nav {
@@ -29,7 +30,7 @@
         list-style-type: none;
         color: #dfdada;
         cursor: pointer;
-        font-family:'Courier New', Courier, monospace;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         user-select: none;
         font-size: 90%;
     }

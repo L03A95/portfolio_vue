@@ -17,7 +17,7 @@
     @import "auto-typer-vue3/dist/style.css";
     h1 {
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: #dfdada;
+        color: #34F537;
         margin-top: 45px;
         font-size: 64px;
     }

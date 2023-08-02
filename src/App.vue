@@ -3,6 +3,7 @@
   import Home from './components/Home.vue'
   import Skills from './components/Skills.vue'
   import Proyects from './components/Proyects/Proyects.vue'
+  import ContactMe from './components/ContactMe.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@
     <Home class="home"/>
     <Skills class="skills"/>
     <Proyects class="proyects"/>
+    <ContactMe class="contact_me"/>
   </div>
   
 </template>
@@ -23,6 +25,7 @@
   "main"
   "skills"
   "proyects"
+  "contact_me"
   ;
 
   grid-template-rows: 8vh;
@@ -47,6 +50,10 @@
   grid-area: proyects;
 }
 
+.contact_me {
+  grid-area: contact_me;
+}
+
 @media screen and (min-width: 640px) {
  
 }
@@ -57,6 +64,7 @@
     "header main main main main"
     "header skills skills skills skills"
     "header proyects proyects proyects proyects"
+    "header contact_me contact_me contact_me contact_me"
     ;
     grid-template-rows: repeat(2,100vh);
     grid-template-columns: repeat(5, 1fr);
@@ -73,6 +81,7 @@
     "header main main main main main"
     "header skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects"
+    "header contact_me contact_me contact_me contact_me contact_me"
     ;
 
     grid-template-columns: repeat(6, 1fr);
@@ -90,6 +99,7 @@
     "header main main main main main main main"
     "header skills skills skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects proyects proyects"
+    "header contact_me contact_me contact_me contact_me contact_me contact_me contact_me"
     ;
 
     grid-template-columns: repeat(8, 1fr);
@@ -108,6 +118,7 @@
     "header main main main main main main main main main"
     "header skills skills skills skills skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects proyects proyects proyects proyects"
+    "header contact_me contact_me contact_me contact_me contact_me contact_me contact_me contact_me contact_me"
     ;
 
     grid-template-columns: repeat(10, 1fr);
