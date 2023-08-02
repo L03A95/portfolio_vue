@@ -54,8 +54,8 @@ export default {
         <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition">
             <p class="detail_text">{{description}}</p> 
             <div class="link_img_wrapper">
-                <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img"></a>
-                <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img"></a>
+                <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img img_link"></a>
+                <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img img_link"></a>
             </div>
         </div>
         <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)'}">            
@@ -114,6 +114,10 @@ export default {
         margin: 0px 5px 0px 0px;
     }
 
+    .img_link {
+        cursor: pointer;
+    }
+
     .html {
         background-color: #ef652a;
     }
@@ -162,6 +166,7 @@ export default {
         width: 40px;
         margin-top: 6px;
         transition: 200ms;
+        cursor: pointer;
     }
 
     .info_active {
