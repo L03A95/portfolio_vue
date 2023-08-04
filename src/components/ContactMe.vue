@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from 'vue'
 import emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2';
 
 const input = ref({
     name: '',
@@ -13,6 +14,7 @@ const handleInputChange = (event) => {
     input[event.target.name] = event.target.value
 }
 
+
 const sendMail = () => {
     emailjs.init('4hg5wsIkVDcYDKOoL')
     emailjs.send("service_uc6r896","template_8ckcjhs",{
@@ -21,7 +23,17 @@ const sendMail = () => {
     message: input.message,
     from_email: input.email,
     reply_to: input.email,
-    });
+    }).then(res => 
+    Swal.fire({
+        icon: 'success',
+        title: 'Email sent succesfully!',
+        confirmButtonText: 'Ok',
+        customClass: {
+            popup: 'swal-wrapper',
+            title: 'swal-title',
+            confirmButton: 'swal-btn'
+  }
+    }))
 
 
 
@@ -47,6 +59,19 @@ const sendMail = () => {
     </div>
 </template>
 <style>
+    .swal-wrapper {
+        background-color: #4f4a4a;
+    }
+
+    .swal-title {
+        color: #dfdada;
+    }
+
+    .swal-btn {
+        background-color: #2f2a2a;
+        color: #dfdada;
+    }
+
     .contact_wrapper {
         height: 100vh;
         background-color: #2f2a2a;

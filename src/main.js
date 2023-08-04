@@ -1,8 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// import VueTyperPlugin from 'vue-typer'
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
-createApp(App)
-// .use(VueTyperPlugin)
-.mount('#app')
+
+
+const app = createApp(App)
+
+app.use(VueSweetalert2);
+
+app.mount('#app')
