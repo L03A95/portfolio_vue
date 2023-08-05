@@ -3,6 +3,8 @@ import {ref} from 'vue'
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2';
 
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 const input = ref({
     name: '',
     email: '',
@@ -12,10 +14,25 @@ const input = ref({
 
 const handleInputChange = (event) => {
     input[event.target.name] = event.target.value
+    console.log(input[event.target.name])
+    console.log(event.target.value)
 }
 
 
 const sendMail = () => {
+    if(input.name ? input.name.length > 30 || input.name.length < 4 : true) {
+        console.log("po weon")
+        return 0;
+    }
+    else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) {
+        console.log("mal email")
+        return 0;
+    }
+    else if (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true) {
+        console.log("mal subject")
+        return 0;
+    }
+
     emailjs.init('4hg5wsIkVDcYDKOoL')
     emailjs.send("service_uc6r896","template_8ckcjhs",{
     subject: input.subject,
@@ -32,8 +49,8 @@ const sendMail = () => {
             popup: 'swal-wrapper',
             title: 'swal-title',
             confirmButton: 'swal-btn'
-  }
-    }))
+        }
+    }));
 
 
 
@@ -42,7 +59,7 @@ const sendMail = () => {
         email: '',
         subject: '',
         message:''
-    }
+    };
 }
 
 </script>
