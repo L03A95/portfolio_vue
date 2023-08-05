@@ -3,8 +3,6 @@ import {ref} from 'vue'
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2';
 
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
 const input = ref({
     name: '',
     email: '',
@@ -14,25 +12,38 @@ const input = ref({
 
 const handleInputChange = (event) => {
     input[event.target.name] = event.target.value
-    console.log(input[event.target.name])
-    console.log(event.target.value)
 }
 
 
 const sendMail = () => {
-    if(input.name ? input.name.length > 30 || input.name.length < 4 : true) {
-        console.log("po weon")
-        return 0;
-    }
-    else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) {
-        console.log("mal email")
-        return 0;
-    }
-    else if (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true) {
-        console.log("mal subject")
-        return 0;
-    }
 
+    let errors = ''
+
+    if(input.name ? input.name.length > 30 || input.name.length < 4 : true) {
+            errors = 'Name must be at least 4 characters and max 30 characters'
+        }
+        else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) {
+            errors = 'You must enter a valid email address'
+        }
+        else if (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true) {
+            errors = 'The subject must be at least 4 characters and max 60 characters'
+        }
+
+    
+    if ((input.name ? input.name.length > 30 || input.name.length < 4 : true) || (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) || (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'There was an error in the form',
+            text: errors,
+            customClass: {
+                popup: 'swal-wrapper',
+                title: 'swal-title',
+                htmlContainer: 'swal-text'
+            }
+        })
+        return;
+    }
+    
     emailjs.init('4hg5wsIkVDcYDKOoL')
     emailjs.send("service_uc6r896","template_8ckcjhs",{
     subject: input.subject,
@@ -52,14 +63,17 @@ const sendMail = () => {
         }
     }));
 
-
-
     input.value = {
         name: '',
         email: '',
         subject: '',
         message:''
     };
+
+    input.name = ''
+    input.email = ''
+    input.subject = ''
+    input.message = ''
 }
 
 </script>
@@ -76,6 +90,10 @@ const sendMail = () => {
     </div>
 </template>
 <style>
+
+    .swal-text { 
+        color: #dfdada !important;
+    }
     .swal-wrapper {
         background-color: #4f4a4a;
     }
