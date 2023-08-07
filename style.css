@@ -14,8 +14,8 @@
 
   /* Works on Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #4f4a4a #2f2a2a;
+    scrollbar-width: thin !important;
+    scrollbar-color: #4f4a4a #2f2a2a !important;
   }
   
   /* Works on Chrome, Edge, and Safari */
@@ -24,11 +24,11 @@
   }
   
   *::-webkit-scrollbar-track {
-    background: #2f2a2a;
+    background: #2f2a2a !important;
   }
   
   *::-webkit-scrollbar-thumb {
-    background-color: #4f4a4a;
-    border-radius: 20px;
-    border: 2px solid #2f2a2a;
+    background-color: #4f4a4a !important;
+    border-radius: 20px !important;
+    border: 2px solid #2f2a2a !important;
   }

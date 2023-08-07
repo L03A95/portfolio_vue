@@ -3,6 +3,8 @@
 </script>
 <template>
     <div class="bg-nav">
+        <button>Download resume</button>
+        <input type="checkbox">
         <ul class="ul-nav">
             <li class="ul-nav__li">Welcome</li>
             <li class="ul-nav__li">Skills</li>
