@@ -72,6 +72,7 @@ export default {
         background-color: #4f4a4a;
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
+        margin-top: 48px;
     }
 
     .tags_wrapper {

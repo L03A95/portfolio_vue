@@ -79,12 +79,12 @@ const sendMail = () => {
 </script>
 <template>
     <div class="contact_wrapper">
-        <h3 class="contact-title">Contact me!</h3>
+        <h3 class="contact-title">{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3>
         <form class="form_wrapper">
-            <input placeholder="Name" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="input.name">
-            <input placeholder="Email" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="input.email">
-            <input placeholder="Subject" class="input-subject" name="subject" v-on:change="handleInputChange" v-bind:value="input.subject">
-            <textarea placeholder="Message" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="input.message"></textarea>
+            <input :placeholder="this.$store.state.language == 'EN' ? 'Name' : 'Nombre'" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="input.name">
+            <input :placeholder="this.$store.state.language == 'EN' ? 'Email' : 'Correo Electrónico'" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="input.email">
+            <input :placeholder="this.$store.state.language == 'EN' ? 'Subject' : 'Asunto'" class="input-subject" name="subject" v-on:change="handleInputChange" v-bind:value="input.subject">
+            <textarea :placeholder="this.$store.state.language == 'EN' ? 'Message' : 'Mensaje'" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="input.message"></textarea>
             <input type="button" class="input_btn" value="Send" v-on:click="sendMail">
         </form>
     </div>
@@ -197,4 +197,12 @@ const sendMail = () => {
     .input-name,.input-message,.input-subject:focus {
         outline: none;
     }
+
+    @media screen and (min-width: 768px) { }
+
+    @media screen and (min-width: 1024px) { }
+
+    @media screen and (min-width: 1280px) { }
+
+    @media screen and (min-width: 1536px) { }
 </style>

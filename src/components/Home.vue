@@ -7,7 +7,7 @@
     <div class="bg-home">
         <div class="presentation_wrapper">
             <h1>Liam Marlon Perez Lupia</h1>
-            <h2>Full Stack web developer</h2>  
+            <h2>{{this.$store.state.language == 'EN' ? 'Full Stack web developer' : 'Desarrollador web Full Stack'}}</h2>  
         </div>
     </div>
     

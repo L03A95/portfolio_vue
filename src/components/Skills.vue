@@ -6,7 +6,7 @@
 <template>
     <div class="bg-skills">
         <div class="skills_wrapper">
-            <h3 class="skills_title">Skills</h3>
+            <h3 class="skills_title">{{this.$store.state.language == 'EN' ? 'Skills' : 'Habilidades'}}</h3>
             <div>
 
                 <h5 class="skill-subtitle">Frontend:</h5>                

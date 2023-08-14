@@ -7,7 +7,7 @@ import ProyectDeck from './ProyectDeck.vue';
 
 <template>
     <div class="bg-proyects">
-        <h3 class="proyects_title">Proyects</h3>
+        <h3 class="proyects_title">{{this.$store.state.language == 'EN' ? 'Proyects' : 'Proyectos'}}</h3>
         <ProyectDeck/>
     </div>
 </template>
@@ -15,7 +15,7 @@ import ProyectDeck from './ProyectDeck.vue';
 <style>
     .bg-proyects {
         background-color: #2f2a2a;
-        height: 100vh;
+        /* height: 100vh; */
         text-align: center;
     }
 
