@@ -8,11 +8,11 @@
 
 <template>
   <div class="app_wrapper">
-    <Nav class="nav"/>
-    <Home class="home"/>
-    <Skills class="skills"/>
-    <Proyects class="proyects"/>
-    <ContactMe class="contact_me"/>
+    <Nav class="nav"></Nav>
+    <Home class="home"></Home>
+    <Skills class="skills"></Skills>
+    <Proyects class="proyects"></Proyects>
+    <ContactMe class="contact_me"></ContactMe>
   </div>
   
 </template>
