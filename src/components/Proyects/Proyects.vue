@@ -20,9 +20,27 @@ import ProyectDeck from './ProyectDeck.vue';
     }
 
     .proyects_title {
-        color:#dfdada;
-        font-size: 80px;
+        color: #00DFC0;
+        font-size: 32px;
         margin: 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @media screen and (min-width: 768px) {
+        .proyects_title {
+            font-size: 80px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+    }
+
+    @media screen and (min-width: 1280px) {
+
+    }
+
+    @media screen and (min-width: 1536px) {
+        
     }
 </style>

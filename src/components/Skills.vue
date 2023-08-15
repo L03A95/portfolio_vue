@@ -45,14 +45,14 @@ PostgreSQL, SQLite
 
 <style scoped> 
     .skills_title {
-        color:#dfdada;
-        font-size: 80px;
+        color: #00DFC0;
+        font-size: 32px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .skill-subtitle {
         color:#dfdada;
-        font-size: 32px;
+        font-size: 16px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .bg-skills {
@@ -86,6 +86,13 @@ PostgreSQL, SQLite
     @media screen and (min-width: 768px) {
         .editor {
             font-size: 16px;
+        }
+        .skills_title {
+            font-size: 80px;
+        }
+
+        .skill-subtitle {
+            font-size: 32px;
         }
     }
 

@@ -148,4 +148,16 @@ export default {
     }
     }
 
+    @media screen and (min-width: 1024px) {
+
+    }
+
+    @media screen and (min-width: 1280px) {
+
+    }
+
+    @media screen and (min-width: 1536px) {
+        
+    }
+
 </style>

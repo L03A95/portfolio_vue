@@ -33,7 +33,7 @@ const sendMail = () => {
     if ((input.name ? input.name.length > 30 || input.name.length < 4 : true) || (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) || (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true)) {
         Swal.fire({
             icon: 'error',
-            title: 'There was an error in the form',
+            title: this.$store.state.language == 'EN' ? 'There was an error in the form' : 'Hubo un error en el formulário',
             text: errors,
             customClass: {
                 popup: 'swal-wrapper',
@@ -54,7 +54,7 @@ const sendMail = () => {
     }).then(res => 
     Swal.fire({
         icon: 'success',
-        title: 'Email sent succesfully!',
+        title: this.$store.state.language == 'EN' ? 'Email sent succesfully!' : 'Correo enviado exitosamente!',
         confirmButtonText: 'Ok',
         customClass: {
             popup: 'swal-wrapper',
@@ -85,7 +85,7 @@ const sendMail = () => {
             <input :placeholder="this.$store.state.language == 'EN' ? 'Email' : 'Correo Electrónico'" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="input.email">
             <input :placeholder="this.$store.state.language == 'EN' ? 'Subject' : 'Asunto'" class="input-subject" name="subject" v-on:change="handleInputChange" v-bind:value="input.subject">
             <textarea :placeholder="this.$store.state.language == 'EN' ? 'Message' : 'Mensaje'" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="input.message"></textarea>
-            <input type="button" class="input_btn" value="Send" v-on:click="sendMail">
+            <input type="button" class="input_btn" :value="this.$store.state.language == 'EN' ? 'Send' : 'Enviar'" v-on:click="sendMail">
         </form>
     </div>
 </template>
@@ -117,13 +117,115 @@ const sendMail = () => {
     }
 
     .contact-title {
-        color:#dfdada;
-        font-size: 80px;
+        color: #00DFC0;
+        font-size: 32px;
         margin: 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .form_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        justify-content: center;
+        background-color: #4f4a4a;
+        padding: 5vh 0;
+        border-radius: 5px;
+        margin: 3vh;
+    }
+
+    .input-name {
+        height: 40px;
+        width: 36vw;
+        margin: 1vw;
+        background-color: #5f5a5a;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: large;
+        color: #dfdada;
+        padding-left: 10px;
+    }
+
+    .input-subject {
+        width: 74vw;
+        height: 40px;
+        background-color: #5f5a5a;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: large;
+        color: #dfdada;
+        padding-left: 10px;
+    }
+
+    .input-message {
+        width: 74vw;
+        height: 24vh;
+        margin: 1vw;
+        resize: none;
+        background-color: #5f5a5a;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: large;
+        color: #dfdada;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    
+    .input_btn {
+        width: 74vw;
+        height: 40px;
+        background: #2f2a2a;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: large;
+        color: #dfdada;
+        cursor: pointer;
+    }
+
+    .input_btn:active {
+        background-color: #3f3a3a;
+    }
+
+    .input-name,.input-message,.input-subject:focus {
+        outline: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        .contact-title {
+            font-size: 80px;
+        }
+
+        .form_wrapper {
+            width: 70vw;
+        }
+
+        .input-name {
+            width: 30vw;
+        }
+
+        .input-subject {
+            width: 62vw;
+        }
+
+        .input-message {
+            width: 62vw;
+        }
+
+        .input_btn {
+            width: 62vw;
+        }
+     }
+
+    @media screen and (min-width: 1024px) {
+        .form_wrapper {
         display: flex;
         flex-wrap: wrap;
         width: 32vw;
@@ -193,14 +295,7 @@ const sendMail = () => {
     .input_btn:active {
         background-color: #3f3a3a;
     }
-
-    .input-name,.input-message,.input-subject:focus {
-        outline: none;
-    }
-
-    @media screen and (min-width: 768px) { }
-
-    @media screen and (min-width: 1024px) { }
+     }
 
     @media screen and (min-width: 1280px) { }
 
