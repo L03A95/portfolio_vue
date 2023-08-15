@@ -1,6 +1,4 @@
-<script setup>
-    import { AutoTyperVue } from "auto-typer-vue3";
-    let text = ['World!', 'Developers!', 'Companies!']
+<script>
 </script>
 
 <template>

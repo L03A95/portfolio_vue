@@ -1,8 +1,12 @@
-<script setup>
+<script>
 import ProyectDeck from './ProyectDeck.vue';
 
 
-
+export default {
+    components: {
+        ProyectDeck
+    }
+}
 </script>
 
 <template>

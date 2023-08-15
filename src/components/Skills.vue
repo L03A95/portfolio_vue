@@ -1,6 +1,11 @@
-<script setup>
+<script>
     import Carrousel from './Carrousel.vue'
-    import Editor from './Editor.vue'
+
+    export default {
+        components: {
+            Carrousel
+        }
+    }
 </script>
 
 <template>

@@ -1,79 +1,94 @@
-<script setup>
+<script>
 import {ref} from 'vue'
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2';
 
-const input = ref({
-    name: '',
-    email: '',
-    subject: '',
-    message:''
-})
+// const input = ref({
+//     name: '',
+//     email: '',
+//     subject: '',
+//     message:''
+// })
 
-const handleInputChange = (event) => {
-    input[event.target.name] = event.target.value
-}
+// const handleInputChange = (event) => {
+//     input[event.target.name] = event.target.value
+// }
 
 
-const sendMail = () => {
-
-    let errors = ''
-
-    if(input.name ? input.name.length > 30 || input.name.length < 4 : true) {
-            errors = 'Name must be at least 4 characters and max 30 characters'
-        }
-        else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) {
-            errors = 'You must enter a valid email address'
-        }
-        else if (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true) {
-            errors = 'The subject must be at least 4 characters and max 60 characters'
-        }
-
-    
-    if ((input.name ? input.name.length > 30 || input.name.length < 4 : true) || (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input.email)) || (input.subject ? input.subject.length > 60 || input.subject.length < 4 : true)) {
-        Swal.fire({
-            icon: 'error',
-            title: this.$store.state.language == 'EN' ? 'There was an error in the form' : 'Hubo un error en el formulário',
-            text: errors,
-            customClass: {
-                popup: 'swal-wrapper',
-                title: 'swal-title',
-                htmlContainer: 'swal-text'
-            }
-        })
-        return;
-    }
-    
-    emailjs.init('4hg5wsIkVDcYDKOoL')
-    emailjs.send("service_uc6r896","template_8ckcjhs",{
-    subject: input.subject,
-    from_name: input.name,
-    message: input.message,
-    from_email: input.email,
-    reply_to: input.email,
-    }).then(res => 
-    Swal.fire({
-        icon: 'success',
-        title: this.$store.state.language == 'EN' ? 'Email sent succesfully!' : 'Correo enviado exitosamente!',
-        confirmButtonText: 'Ok',
-        customClass: {
-            popup: 'swal-wrapper',
-            title: 'swal-title',
-            confirmButton: 'swal-btn'
-        }
-    }));
-
-    input.value = {
+export default {
+    data() {
+        return {
         name: '',
         email: '',
         subject: '',
         message:''
-    };
+        }
+    },
+    methods: {
+        sendMail () {
 
-    input.name = ''
-    input.email = ''
-    input.subject = ''
-    input.message = ''
+        let errors = ''
+
+        if(this.name ? this.name.length > 30 || this.name.length < 4 : true) {
+                errors = 'Name must be at least 4 characters and max 30 characters'
+            }
+            else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email)) {
+                errors = 'You must enter a valid email address'
+            }
+            else if (this.subject ? this.subject.length > 60 || this.subject.length < 4 : true) {
+                errors = 'The subject must be at least 4 characters and max 60 characters'
+            }
+
+
+        if ((this.name ? this.name.length > 30 || this.name.length < 4 : true) || (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email)) || (this.subject ? this.subject.length > 60 || this.subject.length < 4 : true)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'There was an error in the form',
+                text: errors,
+                customClass: {
+                    popup: 'swal-wrapper',
+                    title: 'swal-title',
+                    htmlContainer: 'swal-text'
+                }
+            })
+            return;
+        }
+
+        emailjs.init('4hg5wsIkVDcYDKOoL')
+        emailjs.send("service_uc6r896","template_8ckcjhs",{
+        subject: this.subject,
+        from_name: this.name,
+        message: this.message,
+        from_email: this.email,
+        reply_to: this.email,
+        }).then(res => 
+        Swal.fire({
+            icon: 'success',
+            title: this.$store.state.language == 'EN' ? 'Email sent succesfully!' : 'Correo enviado exitosamente!',
+            confirmButtonText: 'Ok',
+            customClass: {
+                popup: 'swal-wrapper',
+                title: 'swal-title',
+                confirmButton: 'swal-btn'
+            }
+        }));
+
+        this.value = {
+            name: '',
+            email: '',
+            subject: '',
+            message:''
+        };
+
+        this.name = ''
+        this.email = ''
+        this.subject = ''
+        this.message = ''
+        },
+         handleInputChange  (event) {
+        this[event.target.name] = event.target.value
+        }
+    }
 }
 
 </script>
@@ -81,10 +96,10 @@ const sendMail = () => {
     <div class="contact_wrapper">
         <h3 class="contact-title">{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3>
         <form class="form_wrapper">
-            <input :placeholder="this.$store.state.language == 'EN' ? 'Name' : 'Nombre'" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="input.name">
-            <input :placeholder="this.$store.state.language == 'EN' ? 'Email' : 'Correo Electrónico'" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="input.email">
-            <input :placeholder="this.$store.state.language == 'EN' ? 'Subject' : 'Asunto'" class="input-subject" name="subject" v-on:change="handleInputChange" v-bind:value="input.subject">
-            <textarea :placeholder="this.$store.state.language == 'EN' ? 'Message' : 'Mensaje'" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="input.message"></textarea>
+            <input :placeholder="this.$store.state.language == 'EN' ? 'Name' : 'Nombre'" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="name">
+            <input :placeholder="this.$store.state.language == 'EN' ? 'Email' : 'Correo Electrónico'" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="email">
+            <input :placeholder="this.$store.state.language == 'EN' ? 'Subject' : 'Asunto'" class="input-subject" name="subject" v-on:change="handleInputChange" v-bind:value="subject">
+            <textarea :placeholder="this.$store.state.language == 'EN' ? 'Message' : 'Mensaje'" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="message"></textarea>
             <input type="button" class="input_btn" :value="this.$store.state.language == 'EN' ? 'Send' : 'Enviar'" v-on:click="sendMail">
         </form>
     </div>
