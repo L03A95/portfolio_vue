@@ -28,14 +28,11 @@
     }
 
     .presentation_wrapper {
-        display: flex;
-        flex-direction: column;
-        /* margin-left: 48px; */
+        display: block;
     }
 
     .bg-home {
         background-color: #2f2a2a;
-        height: 100vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -69,11 +66,6 @@
             display: flex;
             flex-direction: column;
             margin-left: 48px;
-        }
-
-        .bg-home {
-            justify-content: unset;
-            flex-direction: column;
         }
 
     }

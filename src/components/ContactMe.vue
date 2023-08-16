@@ -94,7 +94,10 @@ export default {
 </script>
 <template>
     <div class="contact_wrapper">
-        <h3 class="contact-title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3>
+        <div>
+           <h3 class="contact-title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3> 
+        </div>
+        
         <form class="form_wrapper">
             <input :placeholder="this.$store.state.language == 'EN' ? 'Name' : 'Nombre'" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="name">
             <input :placeholder="this.$store.state.language == 'EN' ? 'Email' : 'Correo Electrónico'" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="email">
@@ -123,12 +126,10 @@ export default {
     }
 
     .contact_wrapper {
-        height: 100vh;
         background-color: #2f2a2a;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
+        display: grid;
+        place-items: center;
     }
 
     .contact-title {
@@ -248,7 +249,8 @@ export default {
 
     @media screen and (min-width: 1024px) {
         .form_wrapper {
-        display: flex;
+        display: block;
+        text-align: center;
         flex-wrap: wrap;
         width: 32vw;
         justify-content: center;

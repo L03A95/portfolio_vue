@@ -32,7 +32,7 @@
   ;
 
   grid-template-rows: 8vh;
-  grid-template-columns: 100vw;
+  grid-template-columns: auto;
 }
 
 .nav {
@@ -69,7 +69,7 @@
     "header proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me"
     ;
-    grid-template-rows: repeat(2,100vh);
+    grid-template-rows: repeat(2,auto);
     grid-template-columns: repeat(5, 1fr);
   }
 
