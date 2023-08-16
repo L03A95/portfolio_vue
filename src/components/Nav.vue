@@ -1,9 +1,21 @@
 <script>
 export default {
+    data() {
+    return {
+      activeSection: null
+        };
+    },
     methods: {
         changeLanguage () {
             this.$store.commit('switchLanguage')
             console.log(this.$store.state.language)
+        },
+        scrollToSection(sectionId) {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: 'smooth' });
+            this.activeSection = sectionId;
+            }
         }
     },
     computed: {
@@ -27,9 +39,9 @@ export default {
         </label>
         
         <ul class="ul-nav">
-            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'About me' : 'Sobre mi'}}</li>
-            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Projects' : 'Proyectos'}}</li>
-            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Contact me' : 'Contáctame'}}</li>
+            <li class="ul-nav__li" :class="{ active: activeSection === 'about_me'}" @click="scrollToSection('about_me')">{{this.$store.state.language == 'EN' ? 'About me' : 'Sobre mi'}}</li>
+            <li class="ul-nav__li" :class="{ active: activeSection === 'projects'}" @click="scrollToSection('projects')">{{this.$store.state.language == 'EN' ? 'Projects' : 'Proyectos'}}</li>
+            <li class="ul-nav__li" :class="{ active: activeSection === 'contact_me'}" @click="scrollToSection('contact_me')" >{{this.$store.state.language == 'EN' ? 'Contact me' : 'Contáctame'}}</li>
         </ul>
     </div>
 </template>

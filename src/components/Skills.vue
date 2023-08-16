@@ -61,6 +61,7 @@ PostgreSQL, SQLite
         color:#dfdada;
         font-size: 16px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 20px;
     }
     .bg-skills {
          background-color: #2f2a2a;  /* #020c0b  color q debe ser*/

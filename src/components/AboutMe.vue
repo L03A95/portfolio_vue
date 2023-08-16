@@ -25,7 +25,7 @@
     }
 
     .about_text {
-        font-family: monospace;
+        font-family:monospace;
         font-size: 18px;
         margin: 20px;
         color: #dfdada;
@@ -45,6 +45,10 @@
     @media screen and (min-width: 768px) {
         .about_title {
             font-size: 80px;
+        }
+
+        .about_text {
+            font-size: 24px;
         }
     }
 </style>

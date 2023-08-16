@@ -1,4 +1,4 @@
-<script setup>
+<script>
   import { defineComponent } from 'vue'
   import Nav from './components/Nav.vue'
   import Home from './components/Home.vue'
@@ -8,6 +8,12 @@
   import ProgressBar from './components/ProgressBar.vue'
   import Footer from './components/Footer.vue'
   import AboutMe from './components/AboutMe.vue'
+
+  export default {
+  components: {
+    Nav, Home ,Skills, Proyects, ContactMe, ProgressBar, Footer, AboutMe
+  }
+};
 </script>
 
 <template>
@@ -15,10 +21,10 @@
     <Nav class="nav"></Nav>
     <ProgressBar></ProgressBar>
     <Home class="home"></Home>
-    <AboutMe class="about_me"></AboutMe>
+    <AboutMe class="about_me" id="about_me"></AboutMe>
     <Skills class="skills"></Skills>
-    <Proyects class="proyects"></Proyects>
-    <ContactMe class="contact_me"></ContactMe>
+    <Proyects class="proyects" id="projects"></Proyects>
+    <ContactMe class="contact_me" id="contact_me"></ContactMe>
     <Footer></Footer>
   </div>
   
