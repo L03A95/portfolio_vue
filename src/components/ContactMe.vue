@@ -30,20 +30,20 @@ export default {
         let errors = ''
 
         if(this.name ? this.name.length > 30 || this.name.length < 4 : true) {
-                errors = 'Name must be at least 4 characters and max 30 characters'
+                errors = this.$store.state.language == 'EN' ? 'Name must be at least 4 characters and max 30 characters' : 'El nombre debe contener al menos 4 caracteres y maximo 30'
             }
             else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email)) {
-                errors = 'You must enter a valid email address'
+                errors = this.$store.state.language == 'EN' ? 'You must enter a valid email address' : 'Ingresa un email valido'
             }
             else if (this.subject ? this.subject.length > 60 || this.subject.length < 4 : true) {
-                errors = 'The subject must be at least 4 characters and max 60 characters'
+                errors = this.$store.state.language == 'EN' ? 'The subject must be at least 4 characters and max 60 characters' : 'El asunto debe contener al menos 4 caracteres y maximo 60'
             }
 
 
         if ((this.name ? this.name.length > 30 || this.name.length < 4 : true) || (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email)) || (this.subject ? this.subject.length > 60 || this.subject.length < 4 : true)) {
             Swal.fire({
                 icon: 'error',
-                title: 'There was an error in the form',
+                title: this.$store.state.language == 'EN' ? "There's an error in the form" : 'Hay un error en el formulario',
                 text: errors,
                 customClass: {
                     popup: 'swal-wrapper',

@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div class="bg-proyects">
-        <h3 class="proyects_title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Proyects' : 'Proyectos'}}</h3>
+        <h3 class="proyects_title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Projects' : 'Proyectos'}}</h3>
         <ProyectDeck/>
     </div>
 </template>

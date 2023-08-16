@@ -6,7 +6,8 @@
   import Proyects from './components/Proyects/Proyects.vue'
   import ContactMe from './components/ContactMe.vue'
   import ProgressBar from './components/ProgressBar.vue'
-
+  import Footer from './components/Footer.vue'
+  import AboutMe from './components/AboutMe.vue'
 </script>
 
 <template>
@@ -14,9 +15,11 @@
     <Nav class="nav"></Nav>
     <ProgressBar></ProgressBar>
     <Home class="home"></Home>
+    <AboutMe class="about_me"></AboutMe>
     <Skills class="skills"></Skills>
     <Proyects class="proyects"></Proyects>
     <ContactMe class="contact_me"></ContactMe>
+    <Footer></Footer>
   </div>
   
 </template>
@@ -27,9 +30,11 @@
   grid-template-areas: 
   "header"
   "main"
+  "about_me"
   "skills"
   "proyects"
   "contact_me"
+  "footer"
   ;
 
   grid-template-rows: 8vh;
@@ -58,6 +63,10 @@
   grid-area: contact_me;
 }
 
+.about_me {
+  grid-area: about_me;
+}
+
 @media screen and (min-width: 640px) {
  
 }
@@ -66,6 +75,7 @@
   .app_wrapper {
     grid-template-areas: 
     "header main main main main"
+    "header about_me about_me about_me about_me"
     "header skills skills skills skills"
     "header proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me"
@@ -83,6 +93,7 @@
   .app_wrapper {
     grid-template-areas: 
     "header main main main main main"
+    "header about_me about_me about_me about_me about_me"
     "header skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me contact_me"
@@ -101,6 +112,7 @@
   .app_wrapper {
     grid-template-areas: 
     "header main main main main main main main"
+    "header about_me about_me about_me about_me about_me about_me about_me"
     "header skills skills skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me contact_me contact_me contact_me"
@@ -120,6 +132,7 @@
   .app_wrapper {
     grid-template-areas: 
     "header main main main main main main main main main"
+    "header about_me about_me about_me about_me about_me about_me about_me about_me about_me"
     "header skills skills skills skills skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me contact_me contact_me contact_me contact_me contact_me"

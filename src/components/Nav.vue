@@ -27,9 +27,8 @@ export default {
         </label>
         
         <ul class="ul-nav">
-            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Skills' : 'Habilidades'}}</li>
-            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Projects' : 'Proyectos'}}</li>
             <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'About me' : 'Sobre mi'}}</li>
+            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Projects' : 'Proyectos'}}</li>
             <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Contact me' : 'Contáctame'}}</li>
         </ul>
     </div>
@@ -67,12 +66,12 @@ export default {
     }
 
     .ul-nav__li:hover {
-        color: #34F537;
+        color: #00DFC0;
         text-decoration: underline;
     }
 
     .ul-nav__li:active {
-        color: #34F537;
+        color: #00DFC0;
         text-decoration: underline;
 
     }
