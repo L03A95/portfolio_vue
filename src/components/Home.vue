@@ -36,7 +36,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around
+        justify-content: space-around;
+        min-height: 100vh;
     }
 
     .coding_img {

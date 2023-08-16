@@ -5,13 +5,14 @@
   import Skills from './components/Skills.vue'
   import Proyects from './components/Proyects/Proyects.vue'
   import ContactMe from './components/ContactMe.vue'
-
+  import ProgressBar from './components/ProgressBar.vue'
 
 </script>
 
 <template>
   <div class="app_wrapper">
     <Nav class="nav"></Nav>
+    <ProgressBar></ProgressBar>
     <Home class="home"></Home>
     <Skills class="skills"></Skills>
     <Proyects class="proyects"></Proyects>
