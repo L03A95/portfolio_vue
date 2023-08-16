@@ -27,7 +27,6 @@ export default {
         </label>
         
         <ul class="ul-nav">
-            <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Welcome' : 'Bienvenido'}}</li>
             <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Skills' : 'Habilidades'}}</li>
             <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'Projects' : 'Proyectos'}}</li>
             <li class="ul-nav__li">{{this.$store.state.language == 'EN' ? 'About me' : 'Sobre mi'}}</li>
@@ -62,9 +61,9 @@ export default {
         list-style-type: none;
         color: #dfdada;
         cursor: pointer;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'lemonmilk';
         user-select: none;
-        font-size: 80%;
+        font-size: 10px;
     }
 
     .ul-nav__li:hover {

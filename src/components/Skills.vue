@@ -11,7 +11,7 @@
 <template>
     <div class="bg-skills">
         <div class="skills_wrapper">
-            <h3 class="skills_title">{{this.$store.state.language == 'EN' ? 'Skills' : 'Habilidades'}}</h3>
+            <h3 class="skills_title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Skills' : 'Habilidades'}}</h3>
             <div>
 
                 <h5 class="skill-subtitle">Frontend:</h5>                
@@ -51,8 +51,10 @@ PostgreSQL, SQLite
 <style scoped> 
     .skills_title {
         color: #00DFC0;
-        font-size: 32px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: 'lemonmilk';
     }
 
     .skill-subtitle {

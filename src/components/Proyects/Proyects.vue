@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div class="bg-proyects">
-        <h3 class="proyects_title">{{this.$store.state.language == 'EN' ? 'Proyects' : 'Proyectos'}}</h3>
+        <h3 class="proyects_title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Proyects' : 'Proyectos'}}</h3>
         <ProyectDeck/>
     </div>
 </template>
@@ -25,9 +25,12 @@ export default {
 
     .proyects_title {
         color: #00DFC0;
-        font-size: 32px;
-        margin: 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: 'lemonmilk';
+        display: inline-block;
+        position: relative;
     }
 
     @media screen and (min-width: 768px) {

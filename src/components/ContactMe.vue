@@ -94,7 +94,7 @@ export default {
 </script>
 <template>
     <div class="contact_wrapper">
-        <h3 class="contact-title">{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3>
+        <h3 class="contact-title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3>
         <form class="form_wrapper">
             <input :placeholder="this.$store.state.language == 'EN' ? 'Name' : 'Nombre'" class="input-name" name="name" v-on:change="handleInputChange" v-bind:value="name">
             <input :placeholder="this.$store.state.language == 'EN' ? 'Email' : 'Correo Electrónico'" class="input-name" name="email" v-on:change="handleInputChange" v-bind:value="email">
@@ -133,9 +133,10 @@ export default {
 
     .contact-title {
         color: #00DFC0;
-        font-size: 32px;
-        margin: 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        margin-top: 70px;
+        margin-bottom: 50px;
+        font-family: 'lemonmilk';
     }
 
     .form_wrapper {
@@ -161,6 +162,7 @@ export default {
         font-size: large;
         color: #dfdada;
         padding-left: 10px;
+        font-size: 14px;
     }
 
     .input-subject {
@@ -174,6 +176,7 @@ export default {
         font-size: large;
         color: #dfdada;
         padding-left: 10px;
+        font-size: 14px;
     }
 
     .input-message {
@@ -190,6 +193,7 @@ export default {
         color: #dfdada;
         padding-left: 10px;
         padding-top: 5px;
+        font-size: 14px;
     }
     
     .input_btn {
@@ -198,7 +202,7 @@ export default {
         background: #2f2a2a;
         border: none;
         border-radius: 5px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'lemonmilk';
         font-weight: 600;
         font-size: large;
         color: #dfdada;
@@ -224,14 +228,17 @@ export default {
 
         .input-name {
             width: 30vw;
+            font-size: 24px;
         }
 
         .input-subject {
             width: 62vw;
+            font-size: 24px;
         }
 
         .input-message {
             width: 62vw;
+            font-size: 24px;
         }
 
         .input_btn {
@@ -258,7 +265,6 @@ export default {
         background-color: #5f5a5a;
         border: none;
         border-radius: 5px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: large;
         color: #dfdada;
@@ -271,7 +277,6 @@ export default {
         background-color: #5f5a5a;
         border: none;
         border-radius: 5px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: large;
         color: #dfdada;
@@ -286,7 +291,6 @@ export default {
         background-color: #5f5a5a;
         border: none;
         border-radius: 5px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: large;
         color: #dfdada;
@@ -300,7 +304,6 @@ export default {
         background: #2f2a2a;
         border: none;
         border-radius: 5px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: large;
         color: #dfdada;

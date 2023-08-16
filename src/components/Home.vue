@@ -15,7 +15,7 @@
 <style scoped>
     @import "auto-typer-vue3/dist/style.css";
     h1 {
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'lemonmilk';
         color: #00DFC0;
         margin-top: 45px;
         font-size: 24px;
@@ -49,7 +49,7 @@
 
     @media screen and (min-width: 768px) {
         h1 {
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'lemonmilk';
             margin-top: 45px;
             font-size: 64px;
         }
