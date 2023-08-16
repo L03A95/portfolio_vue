@@ -25,7 +25,7 @@
     <Skills class="skills"></Skills>
     <Proyects class="proyects" id="projects"></Proyects>
     <ContactMe class="contact_me" id="contact_me"></ContactMe>
-    <Footer></Footer>
+    <Footer class="footer"></Footer>
   </div>
   
 </template>
@@ -73,6 +73,10 @@
   grid-area: about_me;
 }
 
+.footer {
+  grid-area: footer;
+}
+
 @media screen and (min-width: 640px) {
  
 }
@@ -85,6 +89,7 @@
     "header skills skills skills skills"
     "header proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me"
+    "header footer footer footer footer"
     ;
     grid-template-rows: repeat(2,auto);
     grid-template-columns: repeat(5, 1fr);
@@ -103,6 +108,7 @@
     "header skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me contact_me"
+    "header footer footer footer footer footer"
     ;
 
     grid-template-columns: repeat(6, 1fr);
@@ -122,6 +128,7 @@
     "header skills skills skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me contact_me contact_me contact_me"
+    "header footer footer footer footer footer footer footer"
     ;
 
     grid-template-columns: repeat(8, 1fr);
@@ -142,6 +149,7 @@
     "header skills skills skills skills skills skills skills skills skills"
     "header proyects proyects proyects proyects proyects proyects proyects proyects proyects"
     "header contact_me contact_me contact_me contact_me contact_me contact_me contact_me contact_me contact_me"
+    "header footer footer footer footer footer footer footer footer footer"
     ;
 
     grid-template-columns: repeat(10, 1fr);

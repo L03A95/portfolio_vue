@@ -149,6 +149,7 @@ export default {
         padding: 5vh 0;
         border-radius: 5px;
         margin: 3vh;
+        margin-bottom: 20vh;
     }
 
     .input-name {
@@ -212,6 +213,7 @@ export default {
 
     .input_btn:active {
         background-color: #3f3a3a;
+        color: #00DFC0;
     }
 
     .input-name,.input-message,.input-subject:focus {
