@@ -14,7 +14,6 @@ export default {
     tail: Boolean,
     node: Boolean,
     redux: Boolean,
-    node: Boolean,
     express: Boolean,
     postgre: Boolean,
     sequelize: Boolean
@@ -88,7 +87,7 @@ export default {
     .tag {
         margin: 5px;
         background-color: #000;
-        color: #dfdada;
+        color: #fff;
         padding: 4px;
         border-radius: 4px;
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -108,9 +107,9 @@ export default {
     .title {
         color: #dfdada;
         display: inline;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:monospace;
         font-weight: 600;
-        font-size: x-large
+        font-size: xx-large
     }
 
     .tag_img {
@@ -155,7 +154,7 @@ export default {
     }
 
     .express {
-        background-color: #494949;
+        background-color: #696969;
     }
 
     .postgre {
