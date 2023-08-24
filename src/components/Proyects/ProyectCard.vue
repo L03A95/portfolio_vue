@@ -51,28 +51,30 @@ export default {
             <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
         </ul>
         
-        <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition">
+        <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition position">
             <p class="detail_text">{{description}}</p> 
             <div class="link_img_wrapper">
                 <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img img_link"></a>
                 <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img img_link"></a>
             </div>
         </div>
-        <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)'}">            
+        <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)',marginTop: isActive ? '550px' : '340px'}">            
     </div>
 </template>
 
 <style>
+
     .card_wrapper {
         width: 300px;
         display: flex;
-        justify-content: center;
+        justify-content: top;
         flex-direction: column;
         align-items: center;
         background-color: #4f4a4a;
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
         margin-top: 48px;
+        height: 420px;
     }
 
     .tags_wrapper {
@@ -80,6 +82,7 @@ export default {
         flex-wrap: wrap;
         list-style: none;
         justify-content: center;
+        position: relative;
     }
 
     .tag {
@@ -168,28 +171,38 @@ export default {
         margin-top: 6px;
         transition: 200ms;
         cursor: pointer;
+        z-index: 1000;
+        position: absolute;
     }
 
     .info_active {
         overflow: hidden;
-        position: relative;
-        height: max-content;
-        padding: 15px;
+        position: absolute;
+        height: 250px;
+        width: 300px;
         display: flex;
         justify-content: space-between;
         align-content: space-between;
         flex-wrap: wrap;
         flex-direction: row-reverse;
+        margin-top: 360px;
+        background-color: #4f4a4a;
+        padding: 20px;
+        z-index: 100;
+        border-radius: 5px;
     }
 
     .info_inactive {
         height: 0;
         overflow: hidden;
-
+        position: absolute;
+        width: 300px;
+        margin-top: 350px;
+        background-color: #4f4a4a;
     }
 
     .transition {
-        transition: 500ms;
+        transition: 200ms;
     }
 
     .detail_text {
