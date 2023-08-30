@@ -3,7 +3,8 @@ export default {
   props: {
     title: String,
     image: String,
-    description: String,
+    descriptionEs: String,
+    descriptionEn: String,
     github: String,
     domain: String,
     html: Boolean,
@@ -51,7 +52,7 @@ export default {
         </ul>
         
         <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition position">
-            <p class="detail_text">{{description}}</p> 
+            <p class="detail_text" :style="{ display: isActive ? 'inline-block' : 'none' }">{{this.$store.state.language == 'EN' ? descriptionEn : descriptionEs}}</p> 
             <div class="link_img_wrapper">
                 <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img img_link"></a>
                 <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img img_link"></a>
