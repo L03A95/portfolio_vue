@@ -16,7 +16,9 @@
                 <img src="../images/email_logo.png" class="small_logo"><p class="social_text">liamperezlupia53@gmail.com</p>
             </div>
         </div>
-        <a class="a_btn" :href="this.$store.state.language == 'EN' ? 'https://drive.google.com/uc?export=download&id=1noueBGMu_6rC1qkfG6JN9-ytgtzFPlEj' : 'https://drive.google.com/uc?export=download&id=1Os72QAxJ8qg-IUg-hkByKtBHk1WwhmTM'" download><button class="resume_btn">{{this.$store.state.language == 'EN' ? 'Download resume' : 'Descargar CV'}}</button></a>
+        <a class="a_btn" :href="this.$store.state.language == 'EN' ? 'https://drive.google.com/uc?export=download&id=1CKQyrSXpVg2UIox1-9K1l3hfjZeWMKuZ' : 'https://drive.google.com/uc?export=download&id=1Obv5hJq-nvyJGkZGLNtJhlMlTXVF9laY'" download>
+            <button class="resume_btn">{{this.$store.state.language == 'EN' ? 'Download resume' : 'Descargar CV'}}</button>
+        </a>
     </div>
 </template>
 
