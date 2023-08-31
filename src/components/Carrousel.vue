@@ -12,10 +12,12 @@
             <img src="../images/vuejs_logo.png"/>        
             <img src="../images/node_logo.png" />
             <img src="../images/express_logo_930x930.png" />
-            <img src="../images/php_logo.png" />
+            <!-- <img src="../images/php_logo.png" /> -->
+            <img src="../images/tailwindcss_logo.png"/>
+            <img src="../images/socketio_logo.png">
             <img src="../images/sequelize_logo_920x920.png"/>
             <img src="../images/postgre_logo.png" />
-            <img src="../images/python_logo.png"/>
+            <!-- <img src="../images/python_logo.png"/> -->
         </div>
 
         <div class="logos-slide">
@@ -27,10 +29,12 @@
             <img src="../images/vuejs_logo.png"/>        
             <img src="../images/node_logo.png" />
             <img src="../images/express_logo_930x930.png" />
-            <img src="../images/php_logo.png" />
+            <!-- <img src="../images/php_logo.png" /> -->
+            <img src="../images/socketio_logo.png">
+            <img src="../images/tailwindcss_logo.png"/>
             <img src="../images/sequelize_logo_920x920.png"/>
             <img src="../images/postgre_logo.png" />
-            <img src="../images/python_logo.png"/>
+            <!-- <img src="../images/python_logo.png"/> -->
             </div>
         </div>  
 </template>
