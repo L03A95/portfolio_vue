@@ -17,7 +17,8 @@ export default {
     redux: Boolean,
     express: Boolean,
     postgre: Boolean,
-    sequelize: Boolean
+    sequelize: Boolean,
+    socketio: Boolean
   },
   data () {
     return {
@@ -49,6 +50,7 @@ export default {
             <li class="tag express" v-if="express"><img src="../../images/express_logo_930x930.png" class="tag_img">Express.js</li>
             <li class="tag postgre" v-if="postgre"><img src="../../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
             <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
+            <li class="tag socketio" v-if="socketio"><img src="../../images/socketio_logo.png" class="tag_img">Socket.io</li>
         </ul>
         
         <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition position">

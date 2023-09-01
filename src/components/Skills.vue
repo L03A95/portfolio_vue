@@ -29,6 +29,7 @@
                 <li class="tag express" ><img src="../images/express_logo_930x930.png" class="tag_img">Express.js</li>
                 <li class="tag postgre" ><img src="../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
                 <li class="tag sequelize" ><img src="../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
+                <li class="tag socketio" ><img src="../images/socketio_logo.png" class="tag_img">Socket.io</li>
                 </ul>
             </div>
             <Carrousel class="carrousel"/> 
