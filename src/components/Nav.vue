@@ -54,7 +54,7 @@ export default {
     .bg-nav {
         background-color: #1f1a1a;
         height: 8vh;
-        z-index: 1000;
+        z-index: 10000000;
         display: flex;
         align-items: center;
         justify-content: space-around;
