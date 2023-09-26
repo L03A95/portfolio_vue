@@ -65,7 +65,7 @@ PostgreSQL, SQLite
         margin-left: 20px;
     }
     .bg-skills {
-         background-color: #1f1a1a;  /* #020c0b  color q debe ser*/
+         background-color: #1f1a1a; 
     }
     .carrousel {
         width: 85vw;

@@ -18,9 +18,12 @@ export default {
 
 <style>
     .bg-proyects {
-        background-color: #1f1a1a;
         /* height: 100vh; */
         text-align: center;
+        background-color: #1f1a1a;
+        opacity: 1;
+        background: radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent) 65px 65px, linear-gradient(#00DFC0 5.2px, transparent 5.2px) 0 -2.6px, linear-gradient(90deg, #00DFC0 5.2px, #1f1a1a 5.2px) -2.6px 0;
+        background-size: 130px 130px, 130px 130px, 65px 65px, 65px 65px;
     }
 
     .proyects_title {

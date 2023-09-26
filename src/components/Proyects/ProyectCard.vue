@@ -74,15 +74,14 @@ export default {
     .card_wrapper {
         width: 360px;
         display: flex;
-        /* justify-content: top; */
         flex-direction: column;
         align-items: center;
-        border: 3px solid #00DFC0;
-        /* background-color: #4f4a4a; */
+        border: 2px solid #00DFC0; 
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
         margin-top: 48px;
         height: auto;
+        backdrop-filter: blur(10px);
     }
 
     .tags_wrapper {
