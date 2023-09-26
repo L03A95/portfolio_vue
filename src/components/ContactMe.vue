@@ -126,7 +126,7 @@ export default {
     }
 
     .contact_wrapper {
-        background-color: #2f2a2a;
+        background-color: #1f1a1a;
         text-align: center;
         display: grid;
         place-items: center;

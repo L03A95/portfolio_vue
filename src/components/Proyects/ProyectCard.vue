@@ -35,48 +35,54 @@ export default {
 
 <template>
     <div class="card_wrapper">
-        <p class="title">{{title}}</p>
-        <img :src="image" class="card_img">
+        <div class="first_content_wrapper">
+            <p class="title">{{title}}</p>
+            <img :src="image" class="card_img">
 
-        <ul class="tags_wrapper">
-            <li class="tag html" v-if="html"><img src='../../images/logo_html_800x800.png' class="tag_img">HTML</li>
-            <li class="tag css" v-if="css"><img src="../../images/logo_css_800x800.png" class="tag_img">CSS</li>
-            <li class="tag javascript" v-if="javascript"><img src="../../images/logo_javascript400x400.png" class="tag_img">Javascript</li>
-            <li class="tag react" v-if="react"><img src="../../images/react_logo_2300x2000.png" class="tag_img">React.js</li>
-            <li class="tag vue" v-if="vue"><img src="../../images/vuejs_logo.png" class="tag_img">Vue.js</li>
-            <li class="tag tailwind" v-if="tail"><img src='../../images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
-            <li class="tag redux" v-if="redux"><img src="../../images/redux_logo_537x512.png" class="tag_img">Redux</li>
-            <li class="tag node" v-if="node"><img src="../../images/node_logo.png" class="tag_img">Node.js</li>
-            <li class="tag express" v-if="express"><img src="../../images/express_logo_930x930.png" class="tag_img">Express.js</li>
-            <li class="tag postgre" v-if="postgre"><img src="../../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
-            <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
-            <li class="tag socketio" v-if="socketio"><img src="../../images/socketio_logo.png" class="tag_img">Socket.io</li>
-        </ul>
+            <ul class="tags_wrapper">
+                <li class="tag html" v-if="html"><img src='../../images/logo_html_800x800.png' class="tag_img">HTML</li>
+                <li class="tag css" v-if="css"><img src="../../images/logo_css_800x800.png" class="tag_img">CSS</li>
+                <li class="tag javascript" v-if="javascript"><img src="../../images/logo_javascript400x400.png" class="tag_img">Javascript</li>
+                <li class="tag react" v-if="react"><img src="../../images/react_logo_2300x2000.png" class="tag_img">React.js</li>
+                <li class="tag vue" v-if="vue"><img src="../../images/vuejs_logo.png" class="tag_img">Vue.js</li>
+                <li class="tag tailwind" v-if="tail"><img src='../../images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
+                <li class="tag redux" v-if="redux"><img src="../../images/redux_logo_537x512.png" class="tag_img">Redux</li>
+                <li class="tag node" v-if="node"><img src="../../images/node_logo.png" class="tag_img">Node.js</li>
+                <li class="tag express" v-if="express"><img src="../../images/express_logo_930x930.png" class="tag_img">Express.js</li>
+                <li class="tag postgre" v-if="postgre"><img src="../../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
+                <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
+                <li class="tag socketio" v-if="socketio"><img src="../../images/socketio_logo.png" class="tag_img">Socket.io</li>
+            </ul>
+        </div>
         
-        <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition position">
-            <p class="detail_text" :style="{ display: isActive ? 'inline-block' : 'none' }">{{this.$store.state.language == 'EN' ? descriptionEn : descriptionEs}}</p> 
+        <!-- <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition position"> -->
+        <div>
+            <p class="detail_text" >{{this.$store.state.language == 'EN' ? descriptionEn : descriptionEs}}</p> 
             <div class="link_img_wrapper">
                 <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img img_link"></a>
                 <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img img_link"></a>
             </div>
         </div>
-        <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)',marginTop: isActive ? '550px' : '340px'}">            
+            
+        <!-- </div> -->
+        <!-- <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)',marginTop: isActive ? '550px' : '340px'}">             -->
     </div>
 </template>
 
 <style>
 
     .card_wrapper {
-        width: 300px;
+        width: 360px;
         display: flex;
-        justify-content: top;
+        /* justify-content: top; */
         flex-direction: column;
         align-items: center;
-        background-color: #4f4a4a;
+        border: 3px solid #00DFC0;
+        /* background-color: #4f4a4a; */
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
         margin-top: 48px;
-        height: 420px;
+        height: auto;
     }
 
     .tags_wrapper {
@@ -103,8 +109,10 @@ export default {
 
     .card_img {
         aspect-ratio: 16/9;
-        width: 250px;
+        width: 300px;
         margin: 12px 0px 24px 0px;
+        border-radius: 5px;
+        border: 2px solid #00DFC0;
     }
 
     .title {
@@ -210,11 +218,67 @@ export default {
     .detail_text {
         color: #dfdada;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 20px
     }
 
     .link_img {
         width: 20px;
         margin-right: 10px;
+    }
+
+    .first_content_wrapper {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    @media screen and (min-width: 768px) { 
+        .card_wrapper { 
+            width: 90%;
+            flex-direction: row;
+            padding: 30px;
+         }
+
+        .tags_wrapper { }
+
+        .card_img {
+            width: 350px;
+        }
+
+        .title {}
+
+        .detail_text {
+            margin: 20px;
+        }
+
+        .link_img_wrapper {
+            
+        }
+    }
+
+    @media screen and (min-width: 1024px) { 
+        .card_wrapper {
+            padding: 50px;
+         }
+
+        .card_img {
+            width: 420px;
+            
+        }
+
+        .detail_text {
+            margin: 30px;
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+
+    }
+
+    @media screen and (min-width: 1536px) { 
+
     }
 
 </style>

@@ -18,7 +18,7 @@ export default {
 
 <style>
     .bg-proyects {
-        background-color: #2f2a2a;
+        background-color: #1f1a1a;
         /* height: 100vh; */
         text-align: center;
     }
