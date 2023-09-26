@@ -127,13 +127,17 @@ export default {
 
     .contact_wrapper {
         background-color: #1f1a1a;
+        opacity: 1;
+        background: radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#00DFC0 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #00DFC0 8px, #1f1a1a 8px) -4px 0;
+        background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
         text-align: center;
         display: grid;
         place-items: center;
     }
 
     .contact-title {
-        color: #00DFC0;
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00DFC0, 0 0 20px #00DFC0, 0 0 25px #00DFC0, 0 0 30px #00DFC0, 0 0 35px #00DFC0;
         font-size: 40px;
         margin-top: 70px;
         margin-bottom: 50px;

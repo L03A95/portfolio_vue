@@ -237,12 +237,14 @@ export default {
             width: 90%;
             flex-direction: row;
             padding: 30px;
+            margin-top: 25vh;
+            min-height: 500px;
          }
 
         .tags_wrapper { }
 
         .card_img {
-            width: 350px;
+            width: 400px;
         }
 
         .title {}

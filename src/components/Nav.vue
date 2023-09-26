@@ -52,7 +52,7 @@ export default {
         width: fit-content;
     }
     .bg-nav {
-        background-color: #1f1a1a;
+        background-color: #191414;
         height: 8vh;
         z-index: 10000000;
         display: flex;
