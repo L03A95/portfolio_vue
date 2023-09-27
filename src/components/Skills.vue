@@ -34,6 +34,18 @@
             </div>
             <Carrousel class="carrousel"/> 
         </div>
+
+        <div class="blob">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: rgb(0, 223, 192);"></stop>
+                <stop offset="100%" style="stop-color: rgb(176, 239, 224);"></stop>
+                </linearGradient>
+            </defs>
+            <path id="blob" d="M449,293.5Q430,337,397,365Q364,393,326.5,408Q289,423,249.5,425Q210,427,168.5,415.5Q127,404,79.5,379.5Q32,355,31.5,302.5Q31,250,47,205Q63,160,79.5,108.5Q96,57,153.5,67.5Q211,78,250,78.5Q289,79,334,84Q379,89,415.5,121Q452,153,460,201.5Q468,250,449,293.5Z" fill="url(#gradient)"></path>
+        </svg>
+        </div>
     </div>
 </template>
 
@@ -50,6 +62,12 @@ PostgreSQL, SQLite
 
 
 <style scoped> 
+    .blob {
+        width: 300px;
+        position: absolute;
+        z-index: 1;
+        filter: blur(140px);
+    }
     .skills_title {
         color: #fff;
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00DFC0, 0 0 20px #00DFC0, 0 0 25px #00DFC0, 0 0 30px #00DFC0, 0 0 35px #00DFC0;
@@ -66,10 +84,6 @@ PostgreSQL, SQLite
         margin-left: 20px;
     }
     .bg-skills {
-        background-color: #1f1a1a;
-opacity: 1;
-background: radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#00DFC0 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #00DFC0 8px, #1f1a1a 8px) -4px 0;
-background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
     }
     .carrousel {
         width: 85vw;

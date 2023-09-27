@@ -34,7 +34,6 @@
     }
 
     .bg-home {
-        background-color: #1f1a1a;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

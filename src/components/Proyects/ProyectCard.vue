@@ -55,7 +55,6 @@ export default {
             </ul>
         </div>
         
-        <!-- <div :class="{ 'info_active': isActive, 'info_inactive': !isActive }" :style="{ height: isActive ? '250px' : '0' }" class="transition position"> -->
         <div>
             <p class="detail_text" >{{this.$store.state.language == 'EN' ? descriptionEn : descriptionEs}}</p> 
             <div class="link_img_wrapper">
@@ -63,9 +62,6 @@ export default {
                 <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img img_link"></a>
             </div>
         </div>
-            
-        <!-- </div> -->
-        <!-- <img src="../../images/flecha.png" class="arrow_btn" @click="handleActive" :style="{ transform: isActive ? 'rotate(270deg)' : 'rotate(90deg)',marginTop: isActive ? '550px' : '340px'}">             -->
     </div>
 </template>
 
@@ -76,12 +72,13 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 2px solid #00DFC0; 
+        border: 2px solid rgba(0, 223, 192, 0.05);
+        box-shadow: 0 0 30px rgba(0, 223, 192, 0.3); 
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
-        margin-top: 48px;
+        margin-bottom: 30vh;
         height: auto;
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
     }
 
     .tags_wrapper {
@@ -237,7 +234,7 @@ export default {
             width: 90%;
             flex-direction: row;
             padding: 30px;
-            margin-top: 25vh;
+            margin-bottom: 40vh;
             min-height: 500px;
          }
 

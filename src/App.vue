@@ -45,6 +45,11 @@
 
   grid-template-rows: 8vh;
   grid-template-columns: auto;
+  background-color: #1f1a1a;
+        /* opacity: 1;
+        background: radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1f1a1a 20%, #1f1a1a 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#00DFC0 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #00DFC0 8px, #1f1a1a 8px) -4px 0;
+        background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px; */
+        /* z-index: -1000; */
 }
 
 .nav {
@@ -55,26 +60,32 @@
 
 .home {
   grid-area: main;
+  z-index: 100;
 }
 
 .skills {
   grid-area: skills;
+  z-index: 100;
 }
 
 .proyects {
   grid-area: proyects;
+  z-index: 100;
 }
 
 .contact_me {
   grid-area: contact_me;
+  z-index: 100;
 }
 
 .about_me {
   grid-area: about_me;
+  z-index: 100;
 }
 
 .footer {
   grid-area: footer;
+  z-index: 100;
 }
 
 @media screen and (min-width: 640px) {
