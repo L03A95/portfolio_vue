@@ -30,7 +30,7 @@
         width: 300px;
         position: absolute;
         z-index: 1;
-        filter: blur(140px);
+        filter: blur(100px);
         /* overflow: hidden; */
     }
 

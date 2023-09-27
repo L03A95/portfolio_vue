@@ -94,6 +94,7 @@ export default {
 </script>
 <template>
     <div class="contact_wrapper">
+        <div class="contact_container">
         <div>
            <h3 class="contact-title" v-motion-slide-visible-bottom>{{this.$store.state.language == 'EN' ? 'Contact me!' : 'Contáctame!'}}</h3> 
         </div>
@@ -105,7 +106,8 @@ export default {
             <textarea :placeholder="this.$store.state.language == 'EN' ? 'Message' : 'Mensaje'" class="input-message" name="message" v-on:change="handleInputChange" v-bind:value="message"></textarea>
             <input type="button" class="input_btn" :value="this.$store.state.language == 'EN' ? 'Send' : 'Enviar'" v-on:click="sendMail">
         </form>
-        <div class="blob tree">
+        </div>
+        <div class="blob three">
         <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
             <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -119,9 +121,25 @@ export default {
     </div>
 </template>
 <style>
+.contact_container {
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
 
-    .tree {
+    .blob {
+        width: 300px;
+        position: absolute;
+        z-index: 1;
+        filter: blur(10px);
+    }
+
+    .three {
         transform: translate(-400px, 200px);
+        z-index: -1000;
     }
 
     .swal-text { 
@@ -129,6 +147,7 @@ export default {
     }
     .swal-wrapper {
         background-color: #4f4a4a;
+        position: absolute;
     }
 
     .swal-title {
@@ -158,12 +177,14 @@ export default {
     .form_wrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 80vw;
+        width: 90%;
         justify-content: center;
-        background-color: #4f4a4a;
+        /* backdrop-filter: blur(10px); */
+        border: 2px solid rgba(0, 223, 192, 0.05);
+        box-shadow: 0 0 30px rgba(0, 223, 192, 0.3); 
         padding: 5vh 0;
         border-radius: 5px;
-        margin: 3vh;
+        margin: 5%;
         margin-bottom: 20vh;
     }
 
@@ -171,7 +192,8 @@ export default {
         height: 40px;
         width: 36vw;
         margin: 1vw;
-        background-color: #5f5a5a;
+        background: rgba(0,0,0,0.2);
+
         border: none;
         border-radius: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -185,7 +207,8 @@ export default {
     .input-subject {
         width: 74vw;
         height: 40px;
-        background-color: #5f5a5a;
+        background: rgba(0,0,0,0.2);
+
         border: none;
         border-radius: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -201,7 +224,8 @@ export default {
         height: 24vh;
         margin: 1vw;
         resize: none;
-        background-color: #5f5a5a;
+        background: rgba(0,0,0,0.2);
+
         border: none;
         border-radius: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -216,7 +240,8 @@ export default {
     .input_btn {
         width: 74vw;
         height: 40px;
-        background: #2f2a2a;
+    
+        background: rgba(0,0,0,0.5);
         border: none;
         border-radius: 5px;
         font-family: 'lemonmilk';
@@ -240,23 +265,23 @@ export default {
             font-size: 80px;
         }
 
-        .form_wrapper {
+        /* .form_wrapper {
             width: 70vw;
-        }
+        } */
 
         .input-name {
             width: 30vw;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .input-subject {
             width: 62vw;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .input-message {
             width: 62vw;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .input_btn {
@@ -266,71 +291,27 @@ export default {
 
     @media screen and (min-width: 1024px) {
         .form_wrapper {
-        display: block;
-        text-align: center;
-        flex-wrap: wrap;
-        width: 32vw;
-        justify-content: center;
-        background-color: #4f4a4a;
-        padding: 5vh 0;
-        border-radius: 5px;
-        margin: 10vh;
+            max-width: 800px;
     }
 
     .input-name {
-        height: 40px;
-        width: 14vw;
-        margin: 1vw;
-        background-color: #5f5a5a;
-        border: none;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: large;
-        color: #dfdada;
-        padding-left: 10px;
+        max-width: 321px;
     }
 
     .input-subject {
-        width: 30vw;
-        height: 40px;
-        background-color: #5f5a5a;
-        border: none;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: large;
-        color: #dfdada;
-        padding-left: 10px;
+        max-width: 680px;
     }
 
     .input-message {
-        width: 30vw;
-        height: 20vh;
-        margin: 1vw;
-        resize: none;
-        background-color: #5f5a5a;
-        border: none;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: large;
-        color: #dfdada;
-        padding-left: 10px;
-        padding-top: 5px;
+        max-width: 680px;
     }
     
     .input_btn {
-        width: 30vw;
-        height: 40px;
-        background: #2f2a2a;
-        border: none;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: large;
-        color: #dfdada;
-        cursor: pointer;
+        max-width: 680px;
     }
 
     .input_btn:active {
-        background-color: #3f3a3a;
+
     }
      }
 

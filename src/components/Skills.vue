@@ -66,7 +66,7 @@ PostgreSQL, SQLite
         width: 300px;
         position: absolute;
         z-index: 1;
-        filter: blur(140px);
+        /* filter: blur(100px); */
     }
     .skills_title {
         color: #fff;
