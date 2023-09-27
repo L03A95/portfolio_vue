@@ -17,6 +17,11 @@
     /* Si tienes otros formatos de la fuente (otf, woff, etc.), agrega líneas adicionales aquí */
   }
 
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./src/assets/Poppins-Regular.ttf') format('truetype');
+  }
+
 
   /* Works on Firefox */
 * {
