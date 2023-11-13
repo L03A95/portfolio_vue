@@ -74,7 +74,7 @@
 
 
     .social_text {
-        color:#4f4a4a ;
+        color:#fff;
         font-family: 'Poppins';
         font-size: 13px;
         display: inline-block;
@@ -88,19 +88,24 @@
     .resume_btn {
         width:100%;
         height: 8vh;
-        background: #2f2a2a;
-        border: none;
+        background: rgba(0, 0, 0, 0);
+        border: 3px solid #fff;
         border-radius: 5px;
         font-family: 'lemonmilk';
         font-weight: 600;
         font-size: large;
-        color: #dfdada;
+        color: #fff;
         cursor: pointer;
     }
 
+    .resume_btn:hover {
+        border: 3px solid #dfdada;
+        color:#dfdada;
+    }
+
     .resume_btn:active {
-        background-color: #3f3a3a;
-        color:#00DFC0;
+        border: 3px solid #dfdada;
+        color:#dfdada;
     }
 
     @media screen and (min-width: 768px) { 
