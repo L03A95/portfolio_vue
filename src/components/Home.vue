@@ -25,8 +25,8 @@
 
     h2 {
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: #dfdada;
-        font-size: 18px;
+        color: #9e9e9e;
+        font-size: 16px;
     }
 
     .presentation_wrapper {
@@ -55,8 +55,8 @@
 
         h2 {
             font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #dfdada;
-            font-size: 32px;
+            color: #9e9e9e;
+            font-size: 28px;
         }
 
         .coding_img {
