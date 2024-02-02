@@ -72,13 +72,13 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 2px solid rgba(0, 223, 192, 0.05);
-        box-shadow: 0 0 30px rgba(0, 223, 192, 0.3); 
+        /* border: 2px solid rgba(0, 223, 192, 0.05); */
+        /* box-shadow: 0 0 30px rgba(0, 223, 192, 0.3);  */
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
         margin-bottom: 30vh;
         height: auto;
-        /* backdrop-filter: blur(10px); */
+        background-color: rgba(1,1,1,0.3);
     }
 
     .tags_wrapper {

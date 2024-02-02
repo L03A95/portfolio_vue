@@ -180,8 +180,10 @@ export default {
         width: 90%;
         justify-content: center;
         /* backdrop-filter: blur(10px); */
-        border: 2px solid rgba(0, 223, 192, 0.05);
-        box-shadow: 0 0 30px rgba(0, 223, 192, 0.3); 
+        background-color: rgba(1,1,1,0.3);
+
+        /* border: 2px solid rgba(0, 223, 192, 0.05);
+        box-shadow: 0 0 30px rgba(0, 223, 192, 0.3);  */
         padding: 5vh 0;
         border-radius: 5px;
         margin: 5%;
@@ -194,7 +196,7 @@ export default {
         margin: 1vw;
         background: rgba(0,0,0,0.2);
 
-        border: none;
+        border: 1px solid #252525;
         border-radius: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
@@ -209,7 +211,8 @@ export default {
         height: 40px;
         background: rgba(0,0,0,0.2);
 
-        border: none;
+        border: 1px solid #252525;
+
         border-radius: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
@@ -226,7 +229,8 @@ export default {
         resize: none;
         background: rgba(0,0,0,0.2);
 
-        border: none;
+        border: 1px solid #252525;
+
         border-radius: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
