@@ -69,6 +69,7 @@ export default {
 
     .card_wrapper {
         width: 360px;
+        max-width: 1360px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -116,7 +117,8 @@ export default {
         display: inline;
         font-family:monospace;
         font-weight: 600;
-        font-size: xx-large
+        font-size: xx-large;
+        margin-bottom: 20px
     }
 
     .tag_img {
@@ -276,7 +278,19 @@ export default {
     }
 
     @media screen and (min-width: 1536px) { 
+        .card_img {
+            width: 480px;
+            
+        }
 
+        .title {
+            font-size: 32px;
+        }
+
+        .detail_text {
+            margin: 30px;
+            font-size: 20px;
+        }
     }
 
 </style>

@@ -107,17 +107,6 @@ export default {
             <input type="button" class="input_btn" :value="this.$store.state.language == 'EN' ? 'Send' : 'Enviar'" v-on:click="sendMail">
         </form>
         </div>
-        <div class="blob three">
-        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-            <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color: rgb(0, 223, 192);"></stop>
-                <stop offset="100%" style="stop-color: rgb(176, 239, 224);"></stop>
-                </linearGradient>
-            </defs>
-            <path id="blob" d="M449,293.5Q430,337,397,365Q364,393,326.5,408Q289,423,249.5,425Q210,427,168.5,415.5Q127,404,79.5,379.5Q32,355,31.5,302.5Q31,250,47,205Q63,160,79.5,108.5Q96,57,153.5,67.5Q211,78,250,78.5Q289,79,334,84Q379,89,415.5,121Q452,153,460,201.5Q468,250,449,293.5Z" fill="url(#gradient)"></path>
-        </svg>
-        </div>
     </div>
 </template>
 <style>
