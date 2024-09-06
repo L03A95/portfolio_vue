@@ -75,8 +75,7 @@ PostgreSQL, SQLite
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin-left: 20px;
     }
-    .bg-skills {
-    }
+ 
     .carrousel {
         width: 85vw;
     }
