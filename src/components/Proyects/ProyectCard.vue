@@ -40,26 +40,26 @@ export default {
             <img :src="image" class="card_img">
 
             <ul class="tags_wrapper">
-                <li class="tag html" v-if="html"><img src='../../images/logo_html_800x800.png' class="tag_img">HTML</li>
-                <li class="tag css" v-if="css"><img src="../../images/logo_css_800x800.png" class="tag_img">CSS</li>
-                <li class="tag javascript" v-if="javascript"><img src="../../images/logo_javascript400x400.png" class="tag_img">Javascript</li>
-                <li class="tag react" v-if="react"><img src="../../images/react_logo_2300x2000.png" class="tag_img">React.js</li>
-                <li class="tag vue" v-if="vue"><img src="../../images/vuejs_logo.png" class="tag_img">Vue.js</li>
-                <li class="tag tailwind" v-if="tail"><img src='../../images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
-                <li class="tag redux" v-if="redux"><img src="../../images/redux_logo_537x512.png" class="tag_img">Redux</li>
-                <li class="tag node" v-if="node"><img src="../../images/node_logo.png" class="tag_img">Node.js</li>
-                <li class="tag express" v-if="express"><img src="../../images/express_logo_930x930.png" class="tag_img">Express.js</li>
-                <li class="tag postgre" v-if="postgre"><img src="../../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
-                <li class="tag sequelize" v-if="sequelize"><img src="../../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
-                <li class="tag socketio" v-if="socketio"><img src="../../images/socketio_logo.png" class="tag_img">Socket.io</li>
+                <li class="tag html" v-if="html"><img src='../../../public/images/logo_html_800x800.png' class="tag_img">HTML</li>
+                <li class="tag css" v-if="css"><img src="../../../public/images/logo_css_800x800.png" class="tag_img">CSS</li>
+                <li class="tag javascript" v-if="javascript"><img src="../../../public/images/logo_javascript400x400.png" class="tag_img">Javascript</li>
+                <li class="tag react" v-if="react"><img src="../../../public/images/react_logo_2300x2000.png" class="tag_img">React.js</li>
+                <li class="tag vue" v-if="vue"><img src="../../../public/images/vuejs_logo.png" class="tag_img">Vue.js</li>
+                <li class="tag tailwind" v-if="tail"><img src='../../../public/images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
+                <li class="tag redux" v-if="redux"><img src="../../../public/images/redux_logo_537x512.png" class="tag_img">Redux</li>
+                <li class="tag node" v-if="node"><img src="../../../public/images/node_logo.png" class="tag_img">Node.js</li>
+                <li class="tag express" v-if="express"><img src="../../../public/images/express_logo_930x930.png" class="tag_img">Express.js</li>
+                <li class="tag postgre" v-if="postgre"><img src="../../../public/images/postgre_logo.png" class="tag_img">PostgreSQL</li>
+                <li class="tag sequelize" v-if="sequelize"><img src="../../../public/images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
+                <li class="tag socketio" v-if="socketio"><img src="../../../public/images/socketio_logo.png" class="tag_img">Socket.io</li>
             </ul>
         </div>
         
         <div>
             <p class="detail_text" >{{this.$store.state.language == 'EN' ? descriptionEn : descriptionEs}}</p> 
             <div class="link_img_wrapper">
-                <a :href="github" v-if="github" target="_blank"><img src="../../images/github_logo.png" class="link_img img_link"></a>
-                <a :href="domain" v-if="domain" target="_blank"><img src="../../images/site.png" class="link_img img_link"></a>
+                <a :href="github" v-if="github" target="_blank"><img src="../../../public/images/github_logo.png" class="link_img img_link"></a>
+                <a :href="domain" v-if="domain" target="_blank"><img src="../../../public/images/site.png" class="link_img img_link"></a>
             </div>
         </div>
     </div>

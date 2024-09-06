@@ -16,24 +16,24 @@
 
                 <h5 class="skill-subtitle">Frontend:</h5>                
                 <ul class="tags_wrapper">
-                <li class="tag html"  ><img src='../images/logo_html_800x800.png' class="tag_img">HTML</li>
-                <li class="tag css" ><img src="../images/logo_css_800x800.png" class="tag_img">CSS</li>
-                <li class="tag javascript"><img src="../images/logo_javascript400x400.png" class="tag_img">Javascript</li>
-                <li class="tag react" ><img src="../images/react_logo_2300x2000.png" class="tag_img">React.js</li>
-                <li class="tag vue" ><img src="../images/vuejs_logo.png" class="tag_img">Vue.js</li>
-                <li class="tag tailwind"><img src='../images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
-                <li class="tag redux" ><img src="../images/redux_logo_537x512.png" class="tag_img">Redux</li> </ul>
-                <li class="tag react" ><img src="../images/react_logo_2300x2000.png" class="tag_img">React Native</li>
-                <li class="tag" style="background-color: #3178C6;"><img src="../images/typescript_logo.png" class="tag_img">Typescript</li>
+                <li class="tag html"  ><img src='../../../public/images/logo_html_800x800.png' class="tag_img">HTML</li>
+                <li class="tag css" ><img src="../../../public/images/logo_css_800x800.png" class="tag_img">CSS</li>
+                <li class="tag javascript"><img src="../../../public/images/logo_javascript400x400.png" class="tag_img">Javascript</li>
+                <li class="tag react" ><img src="../../../public/images/react_logo_2300x2000.png" class="tag_img">React.js</li>
+                <li class="tag vue" ><img src="../../../public/images/vuejs_logo.png" class="tag_img">Vue.js</li>
+                <li class="tag tailwind"><img src='../../../public/images/tailwindcss_logo.png' class="tag_img">Tailwind</li>
+                <li class="tag redux" ><img src="../../../public/images/redux_logo_537x512.png" class="tag_img">Redux</li> </ul>
+                <li class="tag react" ><img src="../../../public/images/react_logo_2300x2000.png" class="tag_img">React Native</li>
+                <li class="tag" style="background-color: #3178C6;"><img src="../../../public/images/typescript_logo.png" class="tag_img">Typescript</li>
                 <h5 class="skill-subtitle">Backend:</h5>
                 <ul class="tags_wrapper">
-                <li class="tag node" ><img src="../images/node_logo.png" class="tag_img">Node.js</li>
-                <li class="tag express" ><img src="../images/express_logo_930x930.png" class="tag_img">Express.js</li>
-                <li class="tag postgre" ><img src="../images/postgre_logo.png" class="tag_img">PostgreSQL</li>
-                <li class="tag sequelize" ><img src="../images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
-                <li class="tag socketio" ><img src="../images/socketio_logo.png" class="tag_img">Socket.io</li>
-                <li class="tag" style="background-color: #7a3398;"><img src="../images/csharp_logo.webp" class="tag_img">C#</li>
-                <li class="tag" style="background-color: #7a3398;"><img src="../images/dotnet_logo.png" class="tag_img">ASP .Net</li>
+                <li class="tag node" ><img src="../../../public/images/node_logo.png" class="tag_img">Node.js</li>
+                <li class="tag express" ><img src="../../../public/images/express_logo_930x930.png" class="tag_img">Express.js</li>
+                <li class="tag postgre" ><img src="../../../public/images/postgre_logo.png" class="tag_img">PostgreSQL</li>
+                <li class="tag sequelize" ><img src="../../../public/images/sequelize_logo_920x920.png" class="tag_img">Sequelize</li>
+                <li class="tag socketio" ><img src="../../../public/images/socketio_logo.png" class="tag_img">Socket.io</li>
+                <li class="tag" style="background-color: #7a3398;"><img src="../../../public/images/csharp_logo.webp" class="tag_img">C#</li>
+                <li class="tag" style="background-color: #7a3398;"><img src="../../../public/images/dotnet_logo.png" class="tag_img">ASP .Net</li>
                 </ul>
             </div>
             <Carrousel class="carrousel"/> 
