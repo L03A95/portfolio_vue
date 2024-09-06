@@ -4,37 +4,37 @@
 <template>
       <div class="logos">
         <div class="logos-slide">
-            <img src="../../../public/images/logo_html_800x800.png" />
-            <img src="../../../public/images/logo_css_800x800.png" />
-            <img src="../../../public/images/logo_javascript400x400.png" />
-            <img src="../../../public/images/react_logo_2300x2000.png" />        
-            <img src="../../../public/images/redux_logo_537x512.png"/>        
-            <img src="../../../public/images/vuejs_logo.png"/>        
-            <img src="../../../public/images/node_logo.png" />
-            <img src="../../../public/images/express_logo_930x930.png" />
-            <!-- <img src="../../../public/images/php_logo.png" /> -->
-            <img src="../../../public/images/tailwindcss_logo.png"/>
-            <img src="../../../public/images/socketio_logo.png">
-            <img src="../../../public/images/sequelize_logo_920x920.png"/>
-            <img src="../../../public/images/postgre_logo.png" />
-            <!-- <img src="../../../public/images/python_logo.png"/> -->
+            <img src="/images/logo_html_800x800.png" />
+            <img src="/images/logo_css_800x800.png" />
+            <img src="/images/logo_javascript400x400.png" />
+            <img src="/images/react_logo_2300x2000.png" />        
+            <img src="/images/redux_logo_537x512.png"/>        
+            <img src="/images/vuejs_logo.png"/>        
+            <img src="/images/node_logo.png" />
+            <img src="/images/express_logo_930x930.png" />
+            <!-- <img src="/images/php_logo.png" /> -->
+            <img src="/images/tailwindcss_logo.png"/>
+            <img src="/images/socketio_logo.png">
+            <img src="/images/sequelize_logo_920x920.png"/>
+            <img src="/images/postgre_logo.png" />
+            <!-- <img src="/images/python_logo.png"/> -->
         </div>
 
         <div class="logos-slide">
-            <img src="../../../public/images/logo_html_800x800.png" />
-            <img src="../../../public/images/logo_css_800x800.png" />
-            <img src="../../../public/images/logo_javascript400x400.png" />
-            <img src="../../../public/images/react_logo_2300x2000.png" />        
-            <img src="../../../public/images/redux_logo_537x512.png"/>        
-            <img src="../../../public/images/vuejs_logo.png"/>        
-            <img src="../../../public/images/node_logo.png" />
-            <img src="../../../public/images/express_logo_930x930.png" />
-            <!-- <img src="../../../public/images/php_logo.png" /> -->
-            <img src="../../../public/images/socketio_logo.png">
-            <img src="../../../public/images/tailwindcss_logo.png"/>
-            <img src="../../../public/images/sequelize_logo_920x920.png"/>
-            <img src="../../../public/images/postgre_logo.png" />
-            <!-- <img src="../../../public/images/python_logo.png"/> -->
+            <img src="/images/logo_html_800x800.png" />
+            <img src="/images/logo_css_800x800.png" />
+            <img src="/images/logo_javascript400x400.png" />
+            <img src="/images/react_logo_2300x2000.png" />        
+            <img src="/images/redux_logo_537x512.png"/>        
+            <img src="/images/vuejs_logo.png"/>        
+            <img src="/images/node_logo.png" />
+            <img src="/images/express_logo_930x930.png" />
+            <!-- <img src="/images/php_logo.png" /> -->
+            <img src="/images/socketio_logo.png">
+            <img src="/images/tailwindcss_logo.png"/>
+            <img src="/images/sequelize_logo_920x920.png"/>
+            <img src="/images/postgre_logo.png" />
+            <!-- <img src="/images/python_logo.png"/> -->
             </div>
         </div>  
 </template>
