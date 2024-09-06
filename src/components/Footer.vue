@@ -12,15 +12,15 @@
             </svg>
         </div>
         <div class="social_img__wrapper">
-            <a href="https://github.com/L03A95" target="_blank"><img src="../../../public/images/github_logo.png" class="social_img"></a>
-            <a href="https://www.linkedin.com/in/liam-perez-lupia-33a189257/" target="_blank"><img src="../../../public/images/linkedin_logo.png" class="social_img"></a> 
+            <a href="https://github.com/L03A95" target="_blank"><img src="/images/github_logo.png" class="social_img"></a>
+            <a href="https://www.linkedin.com/in/liam-perez-lupia-33a189257/" target="_blank"><img src="/images/linkedin_logo.png" class="social_img"></a> 
         </div>
         <div>
             <div>
-                <img src="../../../public/images/phone_logo.png" class="small_logo"><p class="social_text">+54 9 11 3767-6146</p>
+                <img src="/images/phone_logo.png" class="small_logo"><p class="social_text">+54 9 11 3767-6146</p>
             </div>
             <div>
-                <img src="../../../public/images/email_logo.png" class="small_logo"><p class="social_text">liamperezlupia53@gmail.com</p>
+                <img src="/images/email_logo.png" class="small_logo"><p class="social_text">liamperezlupia53@gmail.com</p>
             </div>
         </div>
         <a class="a_btn" :href="this.$store.state.language == 'EN' ? 'https://drive.google.com/uc?export=download&id=1CKQyrSXpVg2UIox1-9K1l3hfjZeWMKuZ' : 'https://drive.google.com/uc?export=download&id=1Obv5hJq-nvyJGkZGLNtJhlMlTXVF9laY'" download>

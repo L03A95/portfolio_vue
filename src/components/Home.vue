@@ -9,7 +9,7 @@
             <h1>Liam Marlon Perez Lupia</h1>
             <h2>{{this.$store.state.language == 'EN' ? 'Full Stack web developer' : 'Desarrollador web Full Stack'}}</h2>  
         </div>
-        <img src="../../../public/images/coding.png" class="coding_img">
+        <img src="/images/coding.png" class="coding_img">
     </div>
     
 </template>
