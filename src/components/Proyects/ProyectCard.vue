@@ -55,17 +55,17 @@ export default {
             </ul>
         </div>
         
-        <div>
             <p class="detail_text" >{{this.$store.state.language == 'EN' ? descriptionEn : descriptionEs}}</p> 
             <div class="link_img_wrapper">
                 <a :href="github" v-if="github" target="_blank"><img src="/images/github_logo.png" class="link_img img_link"></a>
                 <a :href="domain" v-if="domain" target="_blank"><img src="/images/site.png" class="link_img img_link"></a>
             </div>
-        </div>
     </div>
 </template>
 
 <style>
+    .link_img_wrapper {
+    }
 
     .card_wrapper {
         width: 360px;
@@ -75,11 +75,13 @@ export default {
         align-items: center;
         /* border: 2px solid rgba(0, 223, 192, 0.05); */
         /* box-shadow: 0 0 30px rgba(0, 223, 192, 0.3);  */
+        justify-content: space-between;
         padding: 24px 6px 24px 6px;
         border-radius: 5px;
-        margin-bottom: 30vh;
-        height: auto;
+        margin: 0 0 30vh 0;
+        height: 658px;
         background-color: rgba(1,1,1,0.3);
+        
     }
 
     .tags_wrapper {
@@ -232,7 +234,7 @@ export default {
     }
 
     @media screen and (min-width: 768px) { 
-        .card_wrapper { 
+        /* .card_wrapper { 
             width: 90%;
             flex-direction: row;
             padding: 30px;
@@ -254,10 +256,15 @@ export default {
 
         .link_img_wrapper {
             
+        } */
+
+        .card_wrapper {
+            margin: 0 2vw 30vh 2vw;
+
         }
     }
 
-    @media screen and (min-width: 1024px) { 
+    /* @media screen and (min-width: 1024px) { 
         .card_wrapper {
             padding: 50px;
          }
@@ -291,6 +298,6 @@ export default {
             margin: 30px;
             font-size: 20px;
         }
-    }
+    } */
 
 </style>
